@@ -1,22 +1,25 @@
-.grow {
+.welcome {
 	background-color: $greenBg;
 	&__inner {
-		@include flex($alignItems: center, $justify: space-between);
-		padding: 62px 0;
+		@include flex($alignItems: center);
+		padding: 50px 0;
 	}
 
 	&__image {
-		width: 40%;
+		width: clamp(280px, 31vw, 449px);
+		margin-right: clamp(50px, 16vw, 224px);
 	}
 
 	&__info {
 		max-width: 549px;
+		min-width: 330px;
 		font-family: Inter;
 		font-style: normal;
 	}
 
 	&__info-title {
 		margin-bottom: 42px;
+		padding-top: 36px;
 		@include fontsSizes($fz: 45px, $fw: 700, $lh: 50px);
 		color: $greyColor;
 
@@ -27,7 +30,8 @@
 
 	&__info-subtitle {
 		margin-bottom: 48px;
-		@include fontsSizes($fz: 20px, $fw: 400, $lh: 35px);
+		color: $darkGreyColor;
+		@include fontsSizes($fz: 19px, $fw: 400, $lh: 35px);
 	}
 
 	&__info-btn {
