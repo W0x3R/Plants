@@ -1,0 +1,26 @@
+.about {
+	background-color: $whiteBg;
+
+	&__inner {
+		@include flex($alignItems: center);
+		padding: 93px 0;
+	}
+
+	&__info {
+		max-width: 605px;
+		margin-right: 153px;
+	}
+
+	&__info-title {
+		color: $greenColor;
+		margin-bottom: 40px;
+		padding-top: 71px;
+		&_orange {
+			color: $orangeColor;
+		}
+	}
+
+	&__info-subtitle {
+		line-height: 30px;
+	}
+}

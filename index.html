@@ -37,7 +37,7 @@
 		<section class="welcome">
 			<div class="container">
 				<div class="welcome__inner">
-					<img src="./images/welcome-image.png" alt="leaf" class="welcome__image">
+					<img src="./images/welcome-image.png" alt="leaf" class="welcome__image" loading="lazy">
 					<div class="welcome__info">
 						<h1 class="welcome__info-title">We grow
 							<span class="welcome__info-title_green">plants</span> and give&nbsp;you oxygen
@@ -61,7 +61,7 @@
 							printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
 							centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
 					</div>
-					<img src="./images/about-image.png" alt="plants">
+					<img src="./images/about-image.png" alt="plants" loading="lazy">
 				</div>
 			</div>
 		</section>
@@ -71,54 +71,83 @@
 					<div class="service__control">
 						<h3 class="service__control-title title">Service and our projects</h3>
 						<div class="service__control-buttons">
-							<button class="service__control-btn">Gardens</button>
-							<button class="service__control-btn">Lawn</button>
-							<button class="service__control-btn">Planting</button>
+							<button class="service__control-btn btn">Gardens</button>
+							<button class="service__control-btn btn">Lawn</button>
+							<button class="service__control-btn btn">Planting</button>
 						</div>
 					</div>
 					<div class="service__cards">
-						<figure>
-							<img class="service__cards-image" src="./images/service_item-one.png" alt="image-one">
+						<figure class="service__cards-figure">
+							<img class="service__cards-image" src="./images/service_item-one.png" alt="image-one" loading="lazy">
 							<figcaption class="figcaption">
 								<p class="figcaption__title">Garden care</p>
 								<p class="figcaption__subtitle">Lorem Ipsum has been the industry</p>
 							</figcaption>
 						</figure>
-						<figure>
-							<img class="service__cards-image" src="./images/service_item-two.png" alt="image-two">
+						<figure class="service__cards-figure">
+							<img class="service__cards-image" src="./images/service_item-two.png" alt="image-two" loading="lazy">
 							<figcaption class="figcaption">
 								<p class="figcaption__title">Planting</p>
 								<p class="figcaption__subtitle">Lorem Ipsum has been the industry</p>
 							</figcaption>
 						</figure>
-						<figure>
-							<img class="service__cards-image" src="./images/service_item-three.png" alt="image-three">
+						<figure class="service__cards-figure">
+							<img class="service__cards-image" src="./images/service_item-three.png" alt="image-three" loading="lazy">
 							<figcaption class="figcaption">
 								<p class="figcaption__title">Lawn care</p>
 								<p class="figcaption__subtitle">Lorem Ipsum has been the industry</p>
 							</figcaption>
 						</figure>
-						<figure>
-							<img class="service__cards-image" src="./images/service_item-four.png" alt="image-four">
+						<figure class="service__cards-figure">
+							<img class="service__cards-image" src="./images/service_item-four.png" alt="image-four" loading="lazy">
 							<figcaption class="figcaption">
 								<p class="figcaption__title">Planting</p>
 								<p class="figcaption__subtitle">Lorem Ipsum has been the industry</p>
 							</figcaption>
 						</figure>
-						<figure>
-							<img class="service__cards-image" src="./images/service_item-five.png" alt="image-five">
+						<figure class="service__cards-figure">
+							<img class="service__cards-image" src="./images/service_item-five.png" alt="image-five" loading="lazy">
 							<figcaption class="figcaption">
 								<p class="figcaption__title">Garden care</p>
 								<p class="figcaption__subtitle">Lorem Ipsum has been the industry</p>
 							</figcaption>
 						</figure>
-						<figure>
-							<img class="service__cards-image" src="./images/service_item-six.png" alt="image-six">
+						<figure class="service__cards-figure">
+							<img class="service__cards-image" src="./images/service_item-six.png" alt="image-six" loading="lazy">
 							<figcaption class="figcaption">
 								<p class="figcaption__title">Garden care</p>
 								<p class="figcaption__subtitle">Lorem Ipsum has been the industry</p>
 							</figcaption>
 						</figure>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="prices">
+			<div class="container">
+				<div class="prices__inner">
+					<div class="prices__tariff">
+						<h3 class="prices__tariff-title">Prices</h3>
+						<div class="prices__tariff-buttons">
+							<button class="prices__tariff-btn">Basics
+								<svg class="prices__tariff-btn-svg" viewBox="0 0 16 16">
+									<use href='./images/svg/accordion_btn.svg#accordion-btn'></use>
+								</svg>
+							</button>
+							<button class="prices__tariff-btn">Standard <svg class="prices__tariff-btn-svg" viewBox="0 0 16 16">
+									<use href='./images/svg/accordion_btn.svg#accordion-btn'></use>
+								</svg></button>
+							<button class="prices__tariff-btn">Pro care <svg class="prices__tariff-btn-svg" viewBox="0 0 16 16">
+									<use href='./images/svg/accordion_btn.svg#accordion-btn'></use>
+								</svg></button>
+						</div>
+					</div>
+					<div class="prices__contacts">
+						<h3 class="prices__contacts-title">Our best <span class="prices__contacts-title_green">gardeners</span> are
+							ready
+							to help you</h3>
+						<button class="prices__contacts-btn btn">Contact us</button>
+						<img class="prices__contacts-img" src="./images/prices-image.png" alt="prices-image" loading="lazy">
 					</div>
 				</div>
 			</div>

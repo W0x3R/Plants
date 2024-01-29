@@ -1,0 +1,53 @@
+.welcome {
+	background-color: $greenBg;
+
+	&__inner {
+		@include flex($alignItems: center);
+		padding: 50px 0;
+	}
+
+	&__image {
+		width: clamp(280px, 31vw, 449px);
+		margin-right: clamp(50px, 16vw, 224px);
+	}
+
+	&__info {
+		max-width: 549px;
+		min-width: 330px;
+		font-family: Inter;
+		font-style: normal;
+	}
+
+	&__info-title {
+		margin-bottom: 42px;
+		padding-top: 36px;
+		font-size: 45px;
+		font-weight: 700;
+		line-height: 50px;
+		color: $greyColor;
+
+		&_green {
+			color: $greenColor;
+		}
+	}
+
+	&__info-subtitle {
+		margin-bottom: 48px;
+		line-height: 35px;
+	}
+
+	&__info-btn {
+		padding: 14px 27px;
+		border-radius: 10px;
+		border: 2px solid #e06733;
+		background: rgba(224, 103, 51, 0);
+		cursor: pointer;
+		transition: 0.5s ease;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $orangeColor;
+		}
+	}
+}
