@@ -1,6 +1,7 @@
 // section welcome start
 .welcome {
 	background-color: $greenBg;
+
 	&__inner {
 		@include flex($alignItems: center);
 		padding: 50px 0;
@@ -21,7 +22,9 @@
 	&__info-title {
 		margin-bottom: 42px;
 		padding-top: 36px;
-		@include fontsSizes($fz: 45px, $fw: 700, $lh: 50px);
+		font-size: 45px;
+		font-weight: 700;
+		line-height: 50px;
 		color: $greyColor;
 
 		&_green {
@@ -31,6 +34,7 @@
 
 	&__info-subtitle {
 		margin-bottom: 48px;
+		line-height: 35px;
 	}
 
 	&__info-btn {
@@ -66,9 +70,6 @@
 	}
 
 	&__info-title {
-		font-family: Inter;
-		font-style: normal;
-		@include fontsSizes($fz: 40px, $fw: 400, $lh: normal);
 		color: $greenColor;
 		margin-bottom: 40px;
 		padding-top: 71px;
@@ -78,16 +79,95 @@
 	}
 
 	&__info-subtitle {
+		line-height: 30px;
 	}
 }
-.container {
+
+//section about end
+
+//section service start
+
+.service {
+	background-color: $greenBg;
+
+	&__inner {
+		padding: 70px 0 121px 0;
+	}
+
+	&__control {
+		@include flex($alignItems: center);
+		margin-bottom: 90px;
+	}
+
+	&__control-title {
+		margin-right: 142px;
+		max-width: 306px;
+		color: $greenColor;
+	}
+
+	&__control-buttons {
+		@include flex($gap: 50px);
+	}
+
+	&__control-btn {
+		padding: 12px 40px;
+		color: #e06733;
+		@include font($family: Inika, $fz: 20px, $fs: normal, $fw: 400);
+		line-height: normal;
+		border-radius: 5px;
+		border: 1px solid #e06733;
+		background-color: transparent;
+		cursor: pointer;
+		transition: 0.3s ease-in;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $orangeColor;
+			color: $whiteBg;
+		}
+	}
+	&__cards {
+		@include flex($wrap: wrap, $justify: space-between, $alignItems: center);
+
+		&-image {
+			margin-bottom: 10px;
+		}
+	}
+
+	.figcaption {
+		text-align: center;
+		border: 1px solid #e3e1d5;
+		border-radius: 0px 0px 20px 20px;
+		border-top-width: 0px;
+		&:nth-child(-n + 3) {
+			margin-bottom: 55px;
+		}
+
+		&__title {
+			margin-bottom: 10px;
+			color: #e06733;
+			@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 700);
+			line-height: 20px;
+		}
+
+		&__subtitle {
+			margin-bottom: 36px;
+			color: #717171;
+			@include font($family: Inter, $fz: 16px, $fs: normal, $fw: 400);
+			line-height: 20px; /* 125% */
+		}
+	}
 }
-.subtitle {
+
+.title {
+	@include font($family: Inika, $fz: 40px, $fs: normal, $fw: 400);
+	line-height: normal;
 }
 
 .subtitle {
 	color: $darkGreyColor;
-	@include fontsSizes($fz: 19px, $fw: 400, $lh: 35px);
-	font-family: Inter;
-	font-style: normal;
+	@include font($family: Inter, $fz: 19px, $fs: normal, $fw: 400);
 }
+
+//section service enf

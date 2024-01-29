@@ -1,6 +1,8 @@
 .header {
 	background-color: $greenBg;
-	@include headerFont();
+	@include font($family: Inika, $fz: 16px, $fs: normal, $fw: 400);
+
+	color: #010201;
 
 	&__inner {
 		@include flex($justify: space-between, $alignItems: center);

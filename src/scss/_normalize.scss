@@ -26,6 +26,8 @@ body {
 	font-family: 'Noto Sans', sans-serif;
 	letter-spacing: 1px;
 	height: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
 }
 
 /**
@@ -268,6 +270,10 @@ progress {
 
 textarea {
 	overflow: auto;
+}
+
+figure {
+	margin: 0;
 }
 
 /**
