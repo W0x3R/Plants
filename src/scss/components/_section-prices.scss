@@ -25,19 +25,21 @@
 	}
 
 	&__tariff-btn {
-		@include flex($alignItems: center);
 		position: relative;
-		padding: 16px 110px 16px 40px;
-		width: 250px;
+		@include sizes(250px, 50px);
+		padding-left: 40px;
 		border-radius: 20px;
+		text-align: left;
 		background: $greenBg;
 		font-size: 20px;
 		font-weight: 700;
 		line-height: 20px;
+		border: 0;
 
 		&-svg {
 			position: absolute;
 			right: 40px;
+			bottom: calc(50% - 8px);
 			@include sizes(16px, 16px);
 		}
 	}

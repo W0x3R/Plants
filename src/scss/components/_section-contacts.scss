@@ -1,0 +1,41 @@
+.contacts {
+	background-color: $greenBg;
+
+	&__inner {
+		padding-top: 60px;
+		@include flex($justify: space-between, $alignItems: flex-start);
+	}
+
+	&__title {
+		@include font($family: Inika, $fz: 40px, $fs: normal, $fw: 700);
+		color: $greenColor;
+		line-height: normal;
+		text-align: center;
+	}
+
+	&__image {
+		order: -1;
+	}
+
+	&__btn {
+		position: relative;
+		margin-top: 88px;
+		padding-left: 20px;
+		background: #d6e7d2;
+		@include sizes(450px, 50px);
+		text-align: left;
+		box-shadow: 0px 4px 4px 0px;
+		color: $greyColor;
+		border: 0;
+		line-height: 40px;
+		letter-spacing: 1px;
+		@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 400);
+	}
+
+	&__svg {
+		position: absolute;
+		right: 17px;
+		bottom: calc(50% - 8px);
+		@include sizes(16px, 16px);
+	}
+}

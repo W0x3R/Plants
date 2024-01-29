@@ -2,6 +2,7 @@
 @import 'section-about';
 @import 'section-service';
 @import 'section-prices';
+@import 'section-contacts';
 
 .title {
 	@include font($family: Inika, $fz: 40px, $fs: normal, $fw: 400);
@@ -30,5 +31,3 @@
 		color: $whiteBg;
 	}
 }
-
-// section prices start
