@@ -22,6 +22,8 @@
 
 	&__control-btn {
 		padding: 12px 40px;
+		width: 161px;
+		height: 50px;
 	}
 	&__cards {
 		@include flex($wrap: wrap, $justify: space-between, $alignItems: center);
