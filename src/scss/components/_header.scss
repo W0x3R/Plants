@@ -1,0 +1,40 @@
+.header {
+	background-color: $greenBg;
+	@include headerFont();
+
+	&__inner {
+		@include flex($justify: space-between, $alignItems: center);
+		padding: 35px 0;
+	}
+}
+.container {
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 10px;
+	box-sizing: content-box;
+}
+.logo {
+	@include flex($alignItems: center, $gap: 2px);
+	&__svg {
+		@include sizes(22px, 22px);
+	}
+
+	&__text {
+	}
+}
+.nav {
+	&__list {
+		@include flex($gap: 46px);
+	}
+
+	&__item {
+		line-height: 50px;
+		transition: 0.6s ease;
+		cursor: pointer;
+
+		&:hover {
+			color: $orangeColor;
+			font-weight: 700;
+		}
+	}
+}
