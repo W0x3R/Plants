@@ -1,0 +1,47 @@
+.grow {
+	background-color: $greenBg;
+	&__inner {
+		@include flex($alignItems: center, $justify: space-between);
+		padding: 62px 0;
+	}
+
+	&__image {
+		width: 40%;
+	}
+
+	&__info {
+		max-width: 549px;
+		font-family: Inter;
+		font-style: normal;
+	}
+
+	&__info-title {
+		margin-bottom: 42px;
+		@include fontsSizes($fz: 45px, $fw: 700, $lh: 50px);
+		color: $greyColor;
+
+		&_green {
+			color: $greenColor;
+		}
+	}
+
+	&__info-subtitle {
+		margin-bottom: 48px;
+		@include fontsSizes($fz: 20px, $fw: 400, $lh: 35px);
+	}
+
+	&__info-btn {
+		padding: 14px 27px;
+		border-radius: 10px;
+		border: 2px solid #e06733;
+		background: rgba(224, 103, 51, 0);
+		cursor: pointer;
+		transition: 0.5s ease;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $orangeColor;
+		}
+	}
+}
