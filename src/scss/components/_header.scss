@@ -4,13 +4,13 @@
 
 	&__inner {
 		@include flex($justify: space-between, $alignItems: center);
-		padding: 35px 0;
+		padding: 42px 0;
 	}
 }
 .container {
 	max-width: 1220px;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0 109px;
 	box-sizing: content-box;
 }
 .logo {
@@ -18,13 +18,10 @@
 	&__svg {
 		@include sizes(22px, 22px);
 	}
-
-	&__text {
-	}
 }
 .nav {
 	&__list {
-		@include flex($gap: 46px);
+		@include flex($gap: 33px);
 	}
 
 	&__item {
