@@ -1,3 +1,4 @@
+// section welcome start
 .welcome {
 	background-color: $greenBg;
 	&__inner {
@@ -30,8 +31,6 @@
 
 	&__info-subtitle {
 		margin-bottom: 48px;
-		color: $darkGreyColor;
-		@include fontsSizes($fz: 19px, $fw: 400, $lh: 35px);
 	}
 
 	&__info-btn {
@@ -48,4 +47,47 @@
 			background-color: $orangeColor;
 		}
 	}
+}
+
+//section welcome end
+
+// section about start
+
+.about {
+	background-color: $whiteBg;
+	&__inner {
+		@include flex($alignItems: center);
+		padding: 93px 0;
+	}
+
+	&__info {
+		max-width: 605px;
+		margin-right: 153px;
+	}
+
+	&__info-title {
+		font-family: Inter;
+		font-style: normal;
+		@include fontsSizes($fz: 40px, $fw: 400, $lh: normal);
+		color: $greenColor;
+		margin-bottom: 40px;
+		padding-top: 71px;
+		&_orange {
+			color: $orangeColor;
+		}
+	}
+
+	&__info-subtitle {
+	}
+}
+.container {
+}
+.subtitle {
+}
+
+.subtitle {
+	color: $darkGreyColor;
+	@include fontsSizes($fz: 19px, $fw: 400, $lh: 35px);
+	font-family: Inter;
+	font-style: normal;
 }
