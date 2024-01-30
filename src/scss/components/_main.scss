@@ -36,7 +36,7 @@
 	background-image: $whiteBg;
 
 	&__inner {
-		padding: 40px 0;
+		padding: 25px 0;
 		@include flex($justify: space-between, $alignItems: center);
 		color: #000;
 
@@ -50,4 +50,62 @@
 	&__data {
 		@include flex($gap: 10px);
 	}
+}
+
+.contacts__select-wrapper {
+	position: relative;
+	margin-top: 88px;
+
+	&:after {
+		content: url('../images/svg/accordion_btn.svg');
+		position: absolute;
+		@include sizes(18px, 18px);
+		right: 15px;
+		bottom: calc(50% - 9px);
+	}
+}
+
+.select {
+	width: 450px;
+	height: 50px;
+	background: #d6e7d2;
+	cursor: pointer;
+
+	padding-left: 20px;
+	@include sizes(450px, 50px);
+	box-shadow: 0px 4px 4px 0px;
+	color: $greyColor;
+	border: 0;
+	line-height: 40px;
+	letter-spacing: 1px;
+	@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 400);
+	appearance: none;
+	transition: 0.5s ease;
+	outline: none;
+
+	// &:hover {
+	// 	border: 1px solid #d6e7d2;
+
+	// 	background: #c1e698;
+	// }
+}
+
+select {
+	position: relative;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: transparent; /* Прозрачный фон */
+}
+
+/* Псевдоэлемент ::after для создания фона при ховере */
+select:hover::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: lightblue; /* Цвет фона при ховере */
+	z-index: -1; /* Помещаем псевдоэлемент под сам элемент select */
 }
