@@ -5,7 +5,7 @@
 		padding: 70px 0 100px 0;
 
 		@include desktop {
-			padding: 60px 0 70px 0;
+			padding: 70px 0;
 		}
 
 		@include bigMobile() {
@@ -67,8 +67,8 @@
 		}
 
 		@include bigMobile() {
-			&-figure:nth-child(-n + 6) {
-				margin-bottom: 34px;
+			&-figure:nth-child(-n + 5) {
+				margin-bottom: 30px;
 			}
 		}
 

@@ -13,7 +13,7 @@
 
 	&__inner {
 		@include flex($justify: space-between, $alignItems: flex-start);
-		padding-top: 60px;
+		padding-top: 47px;
 
 		@include desktop {
 			flex-direction: column;
@@ -46,9 +46,11 @@
 	&__image {
 		width: clamp(100px, 27vw, 400px);
 		order: -2;
+		margin-right: 73px;
 
 		@include desktop {
 			order: 0;
+			margin-right: 0;
 		}
 	}
 
