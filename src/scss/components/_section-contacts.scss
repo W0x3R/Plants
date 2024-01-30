@@ -12,13 +12,13 @@
 	}
 
 	&__inner {
-		padding-top: 60px;
 		@include flex($justify: space-between, $alignItems: flex-start);
+		padding-top: 60px;
 
 		@include desktop {
-			padding-top: 40px;
 			flex-direction: column;
 			align-items: center;
+			padding-top: 40px;
 		}
 
 		@include bigMobile {
@@ -33,8 +33,8 @@
 		text-align: center;
 
 		@include desktop {
-			order: -1;
 			margin-bottom: 100px;
+			order: -1;
 		}
 
 		@include bigMobile {
@@ -44,8 +44,8 @@
 	}
 
 	&__image {
-		order: -2;
 		width: clamp(100px, 27vw, 400px);
+		order: -2;
 
 		@include desktop {
 			order: 0;
@@ -57,26 +57,26 @@
 		margin-top: 88px;
 
 		@include desktop {
-			order: -1;
 			margin-top: 0;
 			margin-bottom: 250px;
+			order: -1;
 		}
 
 		&:after {
-			content: url('../images/svg/accordion_btn.svg');
 			position: absolute;
 			@include sizes(18px, 18px);
 			right: 15px;
 			bottom: calc(50% - 9px);
+			content: url('../images/svg/accordion_btn.svg');
 		}
 	}
 }
 
 .select {
-	background: #d6e7d2;
-	cursor: pointer;
 	padding-left: 20px;
 	@include sizes(450px, 50px);
+	background: #d6e7d2;
+	cursor: pointer;
 	box-shadow: 0px 4px 4px 0px;
 	color: $greyColor;
 	border: 0;

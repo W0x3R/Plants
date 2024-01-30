@@ -29,9 +29,9 @@
 	}
 
 	&__info-title {
-		color: $greenColor;
 		margin-bottom: 40px;
 		padding-top: 60px;
+		color: $greenColor;
 
 		@include desktop {
 			padding-top: 0;

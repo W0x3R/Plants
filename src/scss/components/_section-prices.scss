@@ -13,9 +13,9 @@
 		}
 
 		@include bigMobile {
-			padding: 25px 0 40px 0;
 			flex-direction: column;
 			align-items: center;
+			padding: 25px 0 40px 0;
 		}
 	}
 
@@ -49,22 +49,20 @@
 
 	&__tariff-buttons {
 		@include flex($direction: column, $justify: space-evenly, $alignItems: center);
-		width: 332px;
-		height: 282px;
+		@include sizes(332px, 282px);
 		border-radius: 20px;
 		border: 1px solid #e3e1d5;
 
 		@include bigMobile() {
-			width: 224px;
-			height: 235px;
 			margin-bottom: 20px;
+			@include sizes(224px, 235px);
 		}
 	}
 
 	&__tariff-btn {
 		position: relative;
-		@include sizes(250px, 50px);
 		padding-left: 40px;
+		@include sizes(250px, 50px);
 		border-radius: 20px;
 		text-align: left;
 		background: $greenBg;
@@ -74,8 +72,7 @@
 		border: 0;
 
 		@include bigMobile() {
-			width: 180px;
-			height: 50px;
+			@include sizes(180px, 50px);
 			font-size: 15px;
 		}
 
@@ -95,18 +92,18 @@
 		}
 
 		&-title {
-			color: #000;
 			margin-bottom: 38px;
 			max-width: 452px;
+			color: #000;
 			text-align: right;
 			font-size: 40px;
 			font-weight: 700;
 			line-height: 50px;
 
 			@include desktop {
-				line-height: 35px;
 				margin-top: 85px;
 				margin-bottom: 22px;
+				line-height: 35px;
 				font-size: 25px;
 			}
 

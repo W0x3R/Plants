@@ -1,8 +1,7 @@
 .header {
 	background-color: $greenBg;
 	@include font($family: Inika, $fz: 16px, $fs: normal, $fw: 400);
-
-	color: #010201;
+	color: $linksNavColor;
 
 	&__inner {
 		@include flex($justify: space-between, $alignItems: center);
@@ -33,7 +32,6 @@
 			position: absolute;
 			flex-direction: column;
 			transform: translateY(-200%);
-
 			transition: transform 0.5s;
 		}
 	}
@@ -54,8 +52,7 @@
 .burger {
 	display: none;
 	position: relative;
-	width: 40px;
-	height: 24px;
+	@include sizes(40px, 24px);
 
 	@include bigMobile {
 		display: block;

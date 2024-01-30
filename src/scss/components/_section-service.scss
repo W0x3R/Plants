@@ -82,12 +82,11 @@
 	}
 
 	.figcaption {
+		@include sizes(330px, 100px);
 		text-align: center;
 		border: 1px solid #e3e1d5;
 		border-radius: 0px 0px 20px 20px;
 		border-top-width: 0px;
-		width: 330px;
-		height: 100px;
 
 		@include desktop {
 			width: 280px;
@@ -108,8 +107,8 @@
 			line-height: 20px;
 
 			@include desktop {
-				text-align: center;
 				margin-bottom: 20px;
+				text-align: center;
 			}
 		}
 	}

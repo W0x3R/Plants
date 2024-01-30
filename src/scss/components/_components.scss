@@ -12,6 +12,38 @@
 		padding: 0 25px;
 	}
 }
+.burger {
+	display: none;
+	position: relative;
+	@include sizes(40px, 24px);
+
+	@include bigMobile {
+		display: block;
+	}
+
+	&__line {
+		position: absolute;
+		display: inline-block;
+		width: 40px;
+		border-bottom: 2px solid black;
+
+		&:nth-of-type(1) {
+			top: 0px;
+		}
+
+		&:nth-of-type(2) {
+			top: 8px;
+		}
+
+		&:nth-of-type(3) {
+			top: 16px;
+		}
+
+		&:nth-of-type(4) {
+			top: 24px;
+		}
+	}
+}
 
 .title {
 	@include font($family: Inika, $fz: 40px, $fs: normal, $fw: 400);
@@ -27,8 +59,7 @@
 }
 
 .btn {
-	width: 161px;
-	height: 50px;
+	@include sizes(161px, 50px);
 	border-radius: 5px;
 	border: 1px solid $orangeColor;
 	color: $orangeColor;
@@ -39,8 +70,7 @@
 	transition: 0.3s ease-in;
 
 	@include bigMobile {
-		width: 120px;
-		height: 35px;
+		@include sizes(120px, 35px);
 		text-align: center;
 		font-size: 15px;
 	}

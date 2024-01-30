@@ -1,20 +1,25 @@
 .footer {
-	background-image: $whiteBg;
+	background-color: $whiteBg;
 
 	&__inner {
 		padding: 10px 0;
 		@include flex($justify: space-between, $alignItems: center);
+		@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 400);
 		color: #000;
-		font-family: Inter;
-		font-size: 20px;
-		font-style: normal;
-		font-weight: 400;
 		line-height: 50px;
 
 		@include desktop {
 			flex-direction: column;
 			padding: 5px 0;
 			line-height: 30px;
+			font-size: 18px;
+		}
+
+		@include bigMobile {
+			flex-direction: column;
+			padding: 5px 0;
+			line-height: 30px;
+			font-size: 16px;
 		}
 	}
 
