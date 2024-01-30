@@ -9,6 +9,10 @@
 			flex-direction: column;
 			padding: 40px 0 95px 0;
 		}
+
+		@include bigMobile() {
+			padding: 30px 0;
+		}
 	}
 
 	&__info {
@@ -16,7 +20,7 @@
 		margin-right: 153px;
 
 		&-image {
-			width: clamp(250px, 34vw, 462px);
+			width: clamp(150px, 33vw, 462px);
 		}
 
 		@include desktop {
@@ -35,6 +39,10 @@
 			text-wrap: balance;
 		}
 
+		@include bigMobile() {
+			margin-bottom: 16px;
+		}
+
 		&_orange {
 			color: $orangeColor;
 		}
@@ -48,6 +56,12 @@
 		@include desktop {
 			margin-bottom: 40px;
 			text-align: justify;
+		}
+
+		@include bigMobile() {
+			margin-bottom: 0;
+			font-size: 14px;
+			line-height: 22px;
 		}
 	}
 }

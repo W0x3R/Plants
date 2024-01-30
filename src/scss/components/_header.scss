@@ -11,11 +11,16 @@
 		@include desktop {
 			padding: 35px 0;
 		}
+
+		@include bigMobile() {
+			gap: 108px;
+		}
 	}
 }
 
 .logo {
 	@include flex($alignItems: center, $gap: 2px);
+
 	&__svg {
 		@include sizes(22px, 22px);
 	}
@@ -23,6 +28,14 @@
 .nav {
 	&__list {
 		@include flex($gap: 33px);
+
+		@include bigMobile {
+			position: absolute;
+			flex-direction: column;
+			transform: translateY(-200%);
+
+			transition: transform 0.5s;
+		}
 	}
 
 	&__item {
@@ -34,6 +47,40 @@
 		&:active,
 		&:focus {
 			color: $orangeColor;
+		}
+	}
+}
+
+.burger {
+	display: none;
+	position: relative;
+	width: 40px;
+	height: 24px;
+
+	@include bigMobile {
+		display: block;
+	}
+
+	&__line {
+		position: absolute;
+		display: inline-block;
+		width: 40px;
+		border-bottom: 2px solid black;
+
+		&:nth-of-type(1) {
+			top: 0px;
+		}
+
+		&:nth-of-type(2) {
+			top: 8px;
+		}
+
+		&:nth-of-type(3) {
+			top: 16px;
+		}
+
+		&:nth-of-type(4) {
+			top: 24px;
 		}
 	}
 }

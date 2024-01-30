@@ -3,8 +3,11 @@
 
 	.container {
 		@include desktop {
-			padding-left: 159px;
-			padding-right: 159px;
+			padding: 0 159px;
+		}
+
+		@include bigMobile {
+			padding: 0 42px;
 		}
 	}
 
@@ -16,6 +19,10 @@
 			padding-top: 40px;
 			flex-direction: column;
 			align-items: center;
+		}
+
+		@include bigMobile {
+			padding-top: 25px;
 		}
 	}
 
@@ -29,11 +36,16 @@
 			order: -1;
 			margin-bottom: 100px;
 		}
+
+		@include bigMobile {
+			margin-bottom: 80px;
+			font-size: 25px;
+		}
 	}
 
 	&__image {
 		order: -2;
-		width: clamp(200px, 27vw, 400px);
+		width: clamp(100px, 27vw, 400px);
 
 		@include desktop {
 			order: 0;
@@ -61,8 +73,6 @@
 }
 
 .select {
-	width: 450px;
-	height: 50px;
 	background: #d6e7d2;
 	cursor: pointer;
 	padding-left: 20px;
@@ -76,4 +86,8 @@
 	appearance: none;
 	transition: 0.5s ease;
 	outline: none;
+
+	@include bigMobile() {
+		width: 300px;
+	}
 }

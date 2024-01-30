@@ -7,6 +7,10 @@
 	@include desktop {
 		padding: 0 50px;
 	}
+
+	@include bigMobile {
+		padding: 0 25px;
+	}
 }
 
 .title {
@@ -16,14 +20,15 @@
 	@include desktop {
 		font-size: 35px;
 	}
+
+	@include bigMobile {
+		font-size: 25px;
+	}
 }
 
-// .subtitle {
-// 	color: $darkGreyColor;
-// 	@include font($family: Inter, $fz: 19px, $fs: normal, $fw: 400);
-// }
-
 .btn {
+	width: 161px;
+	height: 50px;
 	border-radius: 5px;
 	border: 1px solid $orangeColor;
 	color: $orangeColor;
@@ -32,6 +37,13 @@
 	background-color: transparent;
 	cursor: pointer;
 	transition: 0.3s ease-in;
+
+	@include bigMobile {
+		width: 120px;
+		height: 35px;
+		text-align: center;
+		font-size: 15px;
+	}
 
 	&:hover,
 	&:focus,
