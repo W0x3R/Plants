@@ -3,17 +3,32 @@
 
 	&__inner {
 		padding: 70px 0 100px 0;
+
+		@include desktop {
+			padding: 60px 0 70px 0;
+		}
 	}
 
 	&__control {
 		@include flex($alignItems: center);
 		margin-bottom: 74px;
+
+		@include desktop {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 40px;
+		}
 	}
 
 	&__control-title {
 		margin-right: 142px;
 		max-width: 306px;
 		color: $greenColor;
+
+		@include desktop {
+			margin-right: 0px;
+			margin-bottom: 40px;
+		}
 	}
 
 	&__control-buttons {
@@ -32,8 +47,18 @@
 			margin-bottom: 55px;
 		}
 
+		@include desktop {
+			&-figure:nth-child(-n + 4) {
+				margin-bottom: 38px;
+			}
+		}
+
 		&-image {
-			margin-bottom: 10px;
+			width: clamp(280px, 25vw, 330px);
+
+			@include desktop {
+				height: 350px;
+			}
 		}
 	}
 
@@ -42,8 +67,15 @@
 		border: 1px solid #e3e1d5;
 		border-radius: 0px 0px 20px 20px;
 		border-top-width: 0px;
+		width: 330px;
+		height: 100px;
+
+		@include desktop {
+			width: 280px;
+		}
 
 		&__title {
+			padding-top: 10px;
 			margin-bottom: 10px;
 			color: $orangeColor;
 			@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 700);
@@ -55,6 +87,11 @@
 			color: $greyColor;
 			@include font($family: Inter, $fz: 16px, $fs: normal, $fw: 400);
 			line-height: 20px;
+
+			@include desktop {
+				text-align: center;
+				margin-bottom: 20px;
+			}
 		}
 	}
 }

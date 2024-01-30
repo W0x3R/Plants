@@ -1,0 +1,42 @@
+.container {
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 109px;
+	box-sizing: content-box;
+
+	@include desktop {
+		padding: 0 50px;
+	}
+}
+
+.title {
+	@include font($family: Inika, $fz: 40px, $fs: normal, $fw: 400);
+	line-height: normal;
+
+	@include desktop {
+		font-size: 35px;
+	}
+}
+
+// .subtitle {
+// 	color: $darkGreyColor;
+// 	@include font($family: Inter, $fz: 19px, $fs: normal, $fw: 400);
+// }
+
+.btn {
+	border-radius: 5px;
+	border: 1px solid $orangeColor;
+	color: $orangeColor;
+	@include font($family: Inika, $fz: 20px, $fs: normal, $fw: 400);
+	line-height: normal;
+	background-color: transparent;
+	cursor: pointer;
+	transition: 0.3s ease-in;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $orangeColor;
+		color: $whiteBg;
+	}
+}

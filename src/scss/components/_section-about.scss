@@ -4,17 +4,37 @@
 	&__inner {
 		@include flex($alignItems: center);
 		padding: 93px 0;
+
+		@include desktop {
+			flex-direction: column;
+			padding: 40px 0 95px 0;
+		}
 	}
 
 	&__info {
 		max-width: 605px;
 		margin-right: 153px;
+
+		&-image {
+			width: clamp(250px, 34vw, 462px);
+		}
+
+		@include desktop {
+			margin-right: 0;
+		}
 	}
 
 	&__info-title {
 		color: $greenColor;
 		margin-bottom: 40px;
 		padding-top: 60px;
+
+		@include desktop {
+			padding-top: 0;
+			text-align: center;
+			text-wrap: balance;
+		}
+
 		&_orange {
 			color: $orangeColor;
 		}
@@ -22,5 +42,12 @@
 
 	&__info-subtitle {
 		line-height: 30px;
+		color: $darkGreyColor;
+		@include font($family: Inter, $fz: 19px, $fs: normal, $fw: 400);
+
+		@include desktop {
+			margin-bottom: 40px;
+			text-align: justify;
+		}
 	}
 }

@@ -1,0 +1,24 @@
+.footer {
+	background-image: $whiteBg;
+
+	&__inner {
+		padding: 10px 0;
+		@include flex($justify: space-between, $alignItems: center);
+		color: #000;
+		font-family: Inter;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 50px;
+
+		@include desktop {
+			flex-direction: column;
+			padding: 5px 0;
+			line-height: 30px;
+		}
+	}
+
+	&__data {
+		@include flex($gap: 10px);
+	}
+}

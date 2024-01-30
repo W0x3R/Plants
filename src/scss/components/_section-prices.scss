@@ -7,13 +7,28 @@
 	&__inner {
 		@include flex($justify: space-between);
 		padding: 58px 0 115px 0;
+
+		@include desktop {
+			padding: 40px 0 88px 0;
+		}
+	}
+
+	&__tariff {
+		@include desktop {
+			margin-right: 40px;
+		}
 	}
 
 	&__tariff-title {
+		margin-bottom: 60px;
 		font-size: 40px;
 		font-weight: 700;
 		line-height: normal;
-		margin-bottom: 60px;
+
+		@include desktop {
+			margin-bottom: 50px;
+			font-size: 35px;
+		}
 	}
 
 	&__tariff-buttons {
@@ -56,6 +71,13 @@
 			font-weight: 700;
 			line-height: 50px;
 
+			@include desktop {
+				line-height: 35px;
+				margin-top: 85px;
+				margin-bottom: 22px;
+				font-size: 25px;
+			}
+
 			&_green {
 				color: $greenColor;
 			}
@@ -65,6 +87,10 @@
 			font-weight: 700;
 			padding: 12px 32px;
 			margin-bottom: 51px;
+
+			@include desktop {
+				margin-bottom: 34px;
+			}
 		}
 
 		&-img {
