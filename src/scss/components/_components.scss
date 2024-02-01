@@ -106,10 +106,24 @@
 		font-size: 15px;
 	}
 
-	&:hover,
-	&:focus,
-	&:active {
+	&:hover {
 		background-color: $orangeColor;
 		color: $whiteBg;
+	}
+
+	&_active {
+		background-color: $orangeColor;
+		color: $whiteBg;
+	}
+
+	&_disabled {
+		background-color: red;
+		color: $whiteBg;
+		opacity: 0.9;
+		cursor: not-allowed;
+
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 }
