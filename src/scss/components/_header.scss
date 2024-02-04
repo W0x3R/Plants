@@ -20,6 +20,7 @@
 		@include sizes(22px, 22px);
 	}
 }
+
 .nav {
 	&__list {
 		@include flex($gap: 33px);
@@ -33,15 +34,14 @@
 			background-image: url('../images/burger-image.jpg');
 			background-size: cover;
 			background-position: bottom;
-			width: 100vw;
-			height: 100vh;
+			@include sizes(100vw, 100vh);
 			transform: translateY(-200%);
 			transition: transform 0.5s;
 		}
 
 		&_active {
 			transform: translateY(0);
-			color: white;
+			color: $whiteBg;
 			font-size: 32px;
 			justify-content: center;
 			gap: 20px;
