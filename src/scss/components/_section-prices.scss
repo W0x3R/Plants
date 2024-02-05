@@ -34,10 +34,11 @@
 			font-size: 40px;
 			font-weight: 700;
 			line-height: 50px;
+			letter-spacing: 0;
 
 			@include desktop {
 				margin-top: 85px;
-				margin-bottom: 22px;
+				margin-bottom: 32px;
 				line-height: 35px;
 				font-size: 25px;
 			}
@@ -47,6 +48,7 @@
 				margin-top: 0;
 				text-align: center;
 				font-size: 20px;
+				max-width: 230px;
 			}
 
 			&_green {
@@ -112,7 +114,8 @@
 
 		@include bigMobile() {
 			margin-bottom: 20px;
-			@include sizes(224px, 235px);
+			padding: 29px 22px;
+			width: 224px;
 		}
 
 		&-btn {
@@ -140,9 +143,16 @@
 				margin-bottom: 32px;
 			}
 
+			@include desktop() {
+				&:not(:last-of-type) {
+					margin-bottom: 14px;
+				}
+			}
+
 			@include bigMobile() {
-				@include sizes(180px, 50px);
+				width: 180px;
 				font-size: 15px;
+				padding: 16px 25px;
 			}
 		}
 
@@ -151,6 +161,10 @@
 			font-weight: 700;
 			line-height: 20px;
 			margin-bottom: 14px;
+
+			@include bigMobile() {
+				font-size: 15px;
+			}
 		}
 
 		&-svg {
@@ -179,6 +193,10 @@
 			letter-spacing: 0;
 			text-align: left;
 			color: rgb(113, 113, 113);
+
+			@include bigMobile {
+				font-size: 9px;
+			}
 		}
 
 		&-price {
@@ -190,12 +208,20 @@
 			text-align: left;
 			color: black;
 
+			@include bigMobile {
+				font-size: 10px;
+			}
+
 			&_orange {
 				color: $orangeColor;
 				font-weight: 700;
 
 				&:nth-of-type(2) {
 					font-size: 16px;
+
+					@include bigMobile {
+						font-size: 14px;
+					}
 				}
 			}
 		}
@@ -213,6 +239,12 @@
 			letter-spacing: 0;
 			cursor: pointer;
 			transition: 0.5s all ease-in-out;
+
+			@include bigMobile {
+				width: 80px;
+				height: 20px;
+				font-size: 13px;
+			}
 
 			&:hover,
 			&:focus,

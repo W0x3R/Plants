@@ -57,11 +57,37 @@
 	&__details {
 		width: 450px;
 		margin-top: 88px;
+		margin-bottom: 47px;
 
 		@include desktop {
 			margin-top: 0;
-			margin-bottom: 250px;
 			order: -1;
+			margin-bottom: 61px;
+		}
+
+		@include bigMobile {
+			width: 300px;
+			margin-bottom: 49px;
+		}
+
+		&-wrapper {
+			@include flex($direction: column);
+			margin-bottom: 250px;
+			max-height: 50px;
+
+			@include desktop {
+				order: -1;
+			}
+
+			@include bigMobile {
+				align-items: center;
+				margin-bottom: 132px;
+			}
+
+			&_active {
+				margin-bottom: 0;
+				max-height: 450px;
+			}
 		}
 
 		&[open] > &-summary {
@@ -87,13 +113,21 @@
 			font-size: 20px;
 			font-weight: 400;
 			line-height: 40px;
-			letter-spacing: 5%;
 			text-align: left;
 			cursor: pointer;
 			transition: all 0.5s ease;
 
+			@include bigMobile {
+				width: 300px;
+			}
+
 			&:hover {
 				background: rgb(193, 230, 152);
+				box-shadow: none;
+			}
+
+			&_active {
+				background-color: rgb(193, 230, 152);
 				box-shadow: none;
 			}
 		}
@@ -128,6 +162,10 @@
 				cursor: pointer;
 				color: rgb(73, 154, 24);
 
+				@include bigMobile {
+					width: 240px;
+				}
+
 				&:hover {
 					color: rgb(113, 113, 113);
 					border-bottom: 1px solid rgb(113, 113, 113);
@@ -140,6 +178,10 @@
 			width: 450px;
 			height: 234px;
 			padding: 27px 50px 31px 20px;
+
+			@include bigMobile {
+				width: 300px;
+			}
 		}
 	}
 	&__popUp {
@@ -155,9 +197,24 @@
 		line-height: 40px;
 		letter-spacing: 5%;
 		text-align: left;
+		transition: transform 0.5s ease;
+		transform: translateX(200%);
+
+		@include desktop {
+			margin-bottom: 14px;
+		}
+
+		@include bigMobile {
+			width: 282px;
+			padding: 23px 36px;
+		}
+
+		&_active {
+			transform: translateX(0);
+		}
 
 		&-wrapper {
-			@include flex($direction: row, $justify: space-evenly);
+			@include flex($direction: row);
 			width: 337px;
 			height: 165px;
 		}
@@ -165,6 +222,17 @@
 		&-info {
 			color: rgb(0, 0, 0);
 			@include flex($direction: column);
+			margin-right: 12px;
+
+			@include bigMobile {
+				margin-right: 5px;
+				max-width: 65px;
+				line-height: 20px;
+
+				& p:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
 		}
 
 		&-value {
@@ -173,11 +241,25 @@
 			}
 			color: rgb(113, 113, 113);
 			@include flex($direction: column);
+
+			@include bigMobile {
+				max-width: 146px;
+				line-height: 20px;
+
+				& p:not(:last-of-type) {
+					margin-bottom: 20px;
+				}
+
+				& p:last-of-type {
+					margin-bottom: 17px;
+				}
+			}
 		}
 
-		&-button {
+		&-link {
 			width: 122px;
 			height: 26px;
+			padding: 7px 29px;
 			box-sizing: border-box;
 			border: 1px solid rgb(224, 103, 51);
 			border-radius: 5px;
@@ -189,6 +271,13 @@
 			letter-spacing: 0%;
 			text-align: center;
 			background-color: transparent;
+			transition: all 0.5s ease;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $orangeColor;
+				color: $whiteBg;
+			}
 		}
 	}
 }
