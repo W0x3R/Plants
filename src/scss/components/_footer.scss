@@ -3,27 +3,58 @@
 
 	&__inner {
 		@include flex($justify: space-between, $alignItems: center);
-		padding: 10px 0;
+		padding: 40px 0;
 		@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 400);
 		line-height: 50px;
 		color: $blackColor;
 
 		@include desktop {
 			flex-direction: column;
-			padding: 5px 0;
-			line-height: 30px;
-			font-size: 18px;
+			padding: 33px 0 18px;
+			font-size: 20px;
+			line-height: 24px;
 		}
 
 		@include bigMobile {
 			flex-direction: column;
-			padding: 5px 0;
-			line-height: 30px;
-			font-size: 16px;
+			padding: 22px 0 7px;
 		}
 	}
 
-	&__data {
+	&__github-link {
 		@include flex($gap: 10px);
+		transition: 0.5s ease;
+
+		@include desktop {
+			margin-bottom: 16px;
+		}
+
+		@include hover {
+			&:hover {
+				color: $orangeColor;
+			}
+		}
+
+		&:active {
+			color: $orangeColor;
+		}
+	}
+
+	&__date {
+		@include desktop {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__rss-link {
+		@include hover {
+			&:hover {
+				color: $orangeColor;
+			}
+		}
+
+		&:active {
+			color: $orangeColor;
+		}
 	}
 }

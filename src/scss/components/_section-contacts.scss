@@ -14,7 +14,7 @@
 
 	&__inner {
 		@include flex($justify: space-between, $alignItems: flex-start);
-		padding-top: 47px;
+		padding-top: 52px;
 
 		@include desktop {
 			flex-direction: column;

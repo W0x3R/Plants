@@ -184,9 +184,11 @@ contactsDetails.addEventListener('click', function (e) {
 			if (Object.values(city[datasetValue])[i].startsWith('+')) {
 				popUpButtonLink.setAttribute('href', `tel:${Object.values(city[datasetValue])[i]}`)
 			}
-
 		}
-
 	}
 })
+
+const getYear = new Date().getFullYear()
+const footerDate = document.querySelector('.footer__date')
+footerDate.textContent = getYear
 
