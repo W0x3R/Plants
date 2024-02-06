@@ -1,4 +1,5 @@
 .header {
+	overflow-x: hidden;
 	@include font($family: Inika, $fz: 16px, $fs: normal, $fw: 400);
 	background-color: $greenBg;
 	color: $linksNavColor;

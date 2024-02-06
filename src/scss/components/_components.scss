@@ -37,7 +37,7 @@
 		display: inline-block;
 		width: 40px;
 		border-bottom: 2px solid $blackColor;
-		transition: transform 0.3s;
+		transition: transform 0.2s ease;
 
 		&:nth-of-type(1) {
 			top: 0px;

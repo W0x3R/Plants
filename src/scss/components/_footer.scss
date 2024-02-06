@@ -47,6 +47,8 @@
 	}
 
 	&__rss-link {
+		transition: 0.5s ease;
+
 		@include hover {
 			&:hover {
 				color: $orangeColor;
