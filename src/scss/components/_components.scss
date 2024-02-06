@@ -1,0 +1,151 @@
+.body_active {
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 109px;
+	box-sizing: content-box;
+
+	@include desktop {
+		padding: 0 50px;
+	}
+
+	@include bigMobile {
+		padding: 0 25px;
+	}
+}
+
+.burger {
+	display: none;
+	position: relative;
+	@include sizes(40px, 24px);
+	cursor: pointer;
+
+	&_active {
+		@include sizes(34px, 28px);
+		right: 20px;
+	}
+
+	@include bigMobile {
+		display: block;
+	}
+
+	&__line {
+		position: absolute;
+		display: inline-block;
+		width: 40px;
+		border-bottom: 2px solid $blackColor;
+		transition: transform 0.2s ease;
+
+		&:nth-of-type(1) {
+			top: 0px;
+		}
+
+		&:nth-of-type(2) {
+			top: 8px;
+		}
+
+		&:nth-of-type(3) {
+			top: 16px;
+		}
+
+		&:nth-of-type(4) {
+			top: 24px;
+		}
+
+		&_active {
+			width: 34px;
+			border-bottom: 2px solid $whiteColor;
+
+			&:nth-of-type(1) {
+				transform: translate(300%);
+			}
+
+			&:nth-of-type(2) {
+				transform: rotate(45deg);
+				top: 12px;
+			}
+
+			&:nth-of-type(3) {
+				transform: rotate(-45deg);
+				top: 12px;
+			}
+
+			&:nth-of-type(4) {
+				transform: translate(300%);
+			}
+		}
+	}
+}
+
+.title {
+	@include font($family: Inika, $fz: 40px, $fs: normal, $fw: 400);
+	line-height: 52px;
+
+	@include desktop {
+		font-size: 35px;
+		line-height: 46px;
+		letter-spacing: 0;
+	}
+
+	@include bigMobile {
+		line-height: 33px;
+		font-size: 25px;
+	}
+}
+
+.btn {
+	@include sizes(161px, 50px);
+	border: 1px solid $orangeColor;
+	border-radius: 5px;
+	@include font($family: Inika, $fz: 20px, $fs: normal, $fw: 400);
+	line-height: normal;
+	color: $orangeColor;
+	background-color: transparent;
+	cursor: pointer;
+	transition:
+		color 0.2s ease,
+		background-color 0.4s ease-in;
+
+	@include bigMobile {
+		@include sizes(120px, 35px);
+		text-align: center;
+		font-size: 15px;
+	}
+
+	@include hover {
+		&:hover {
+			background-color: $orangeColor;
+			color: $whiteColor;
+		}
+	}
+
+	&:focus {
+		border-color: $redColor;
+	}
+
+	&_active {
+		background-color: $orangeColor;
+		color: $whiteColor;
+	}
+
+	&_disabled {
+		background-color: $redColor;
+		color: $whiteColor;
+		opacity: 0.9;
+		cursor: not-allowed;
+		transition:
+			color 0.2s ease,
+			opacity 0.4s ease-in;
+
+		@include hover {
+			&:hover {
+				background-color: $redColor;
+				color: $whiteColor;
+				opacity: 0.5;
+			}
+		}
+	}
+}

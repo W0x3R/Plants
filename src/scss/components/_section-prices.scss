@@ -1,0 +1,278 @@
+.prices {
+	background-color: $whiteColor;
+	font-family: Inter;
+	font-style: normal;
+	color: $blackColor;
+
+	&__inner {
+		@include flex($justify: space-between);
+		padding: 58px 0 115px 0;
+
+		@include desktop {
+			padding: 45px 0 88px 0;
+		}
+
+		@include bigMobile {
+			flex-direction: column;
+			align-items: center;
+			padding: 35px 0 40px 0;
+		}
+	}
+
+	&__contacts {
+		@include flex($direction: column, $alignItems: flex-end);
+
+		@include bigMobile() {
+			align-items: center;
+		}
+
+		&-title {
+			margin-bottom: 38px;
+			max-width: 452px;
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 50px;
+			letter-spacing: 0;
+			color: $blackColor;
+			text-align: right;
+
+			@include desktop {
+				padding-top: 100px;
+				margin-bottom: 32px;
+				font-size: 25px;
+				line-height: 35px;
+			}
+
+			@include bigMobile() {
+				padding-top: 0;
+				margin-top: 0;
+				margin-bottom: 20px;
+				max-width: 230px;
+				font-size: 20px;
+				text-align: center;
+			}
+
+			&_green {
+				color: $greenColor-73;
+			}
+		}
+
+		&-btn {
+			margin-bottom: 51px;
+			font-weight: 700;
+
+			&:active {
+				background-color: $orangeColor;
+				color: $whiteColor;
+			}
+
+			@include desktop {
+				margin-bottom: 34px;
+			}
+
+			@include bigMobile() {
+				margin-bottom: 0;
+			}
+		}
+
+		&-img {
+			width: 152px;
+
+			@include bigMobile() {
+				display: none;
+			}
+		}
+	}
+}
+
+.tariff {
+	@include desktop {
+		margin-right: 40px;
+	}
+
+	@include bigMobile {
+		margin-right: 0;
+	}
+
+	&__title {
+		margin-bottom: 60px;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: normal;
+
+		@include desktop {
+			margin-bottom: 55px;
+			padding-left: 14px;
+			font-size: 35px;
+		}
+
+		@include bigMobile() {
+			margin-bottom: 34px;
+			padding-left: 0;
+			font-size: 25px;
+			text-align: center;
+		}
+	}
+
+	&__buttons {
+		width: 332px;
+		padding: 34px 41px;
+		border-radius: 20px;
+		border: 1px solid $greyColor-227;
+		letter-spacing: 0;
+
+		@include bigMobile() {
+			margin-bottom: 20px;
+			padding: 29px 22px;
+			width: 224px;
+		}
+
+		&-btn {
+			position: relative;
+			@include flex($direction: column);
+			padding: 16px 41px;
+			width: 250px;
+			max-height: 50px;
+			border: 0;
+			border-radius: 20px;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 20px;
+			text-align: left;
+			background: $greenBg;
+			cursor: pointer;
+			overflow: hidden;
+			transition: max-height 0.4s ease-in;
+
+			&_active {
+				max-height: 155px;
+				background-color: $greyColor-214;
+			}
+
+			&:not(:last-of-type) {
+				margin-bottom: 32px;
+			}
+
+			@include bigMobile() {
+				&:not(:last-of-type) {
+					margin-bottom: 14px;
+				}
+			}
+
+			@include bigMobile() {
+				padding: 16px 25px;
+				width: 180px;
+				font-size: 15px;
+			}
+		}
+
+		&-title {
+			margin-bottom: 14px;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 20px;
+
+			@include bigMobile() {
+				font-size: 15px;
+			}
+		}
+
+		&-svg {
+			position: absolute;
+			right: 40px;
+			top: 17px;
+			@include sizes(16px, 16px);
+			transition: all 0.5s ease;
+			fill: $greyColor-217;
+			stroke: $whiteColor;
+			stroke-width: 1.1px;
+
+			&_active {
+				transform: rotate(180deg);
+				fill: $greyColor-174;
+			}
+		}
+
+		&-text {
+			padding-top: 6px;
+			margin-bottom: 6px;
+			border-top: 0.5px solid $greyColor-174;
+			font-size: 10px;
+			font-weight: 300;
+			line-height: 10px;
+			letter-spacing: 0;
+			text-align: left;
+			color: $greyColor-113;
+
+			@include bigMobile {
+				font-size: 9px;
+			}
+		}
+
+		&-price {
+			margin-bottom: 12px;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 20px;
+			letter-spacing: 0;
+			text-align: left;
+			color: $blackColor;
+
+			@include bigMobile {
+				font-size: 10px;
+			}
+
+			&_orange {
+				color: $orangeColor;
+				font-weight: 700;
+
+				&:nth-of-type(2) {
+					font-size: 16px;
+
+					@include bigMobile {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		&-order {
+			@include sizes(86px,25px);
+			padding: 3px 20px;
+			border: 0;
+			border-radius: 10px;
+			background: $whiteColor;
+			color: $greyColor-113;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 20px;
+			letter-spacing: 0;
+			cursor: pointer;
+			transition:
+				color 0.3s ease,
+				background-color 0.6s ease-in;
+			text-align: center;
+
+			@include bigMobile {
+				@include sizes(80px, 24px);
+				font-size: 13px;
+			}
+
+			@include hover {
+				&:hover {
+					color: $whiteColor;
+					background-color: $orangeColor;
+				}
+			}
+
+			&:focus {
+				border-color: $redColor;
+			}
+
+			&:active {
+				color: $whiteColor;
+				background-color: $orangeColor;
+			}
+		}
+	}
+}

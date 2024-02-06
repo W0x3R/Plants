@@ -1,0 +1,279 @@
+.contacts {
+	background-color: $greenBg;
+	overflow: hidden;
+
+	.container {
+		@include desktop {
+			padding: 0 159px;
+		}
+
+		@include bigMobile {
+			padding: 0 42px;
+		}
+	}
+
+	&__inner {
+		@include flex($justify: space-between, $alignItems: flex-start);
+		padding-top: 52px;
+
+		@include desktop {
+			flex-direction: column;
+			align-items: center;
+			padding-top: 40px;
+		}
+
+		@include bigMobile {
+			padding-top: 25px;
+		}
+	}
+
+	&__title {
+		@include font($family: Inika, $fz: 40px, $fs: normal, $fw: 700);
+		line-height: normal;
+		color: $greenColor-73;
+		text-align: center;
+
+		@include desktop {
+			order: -1;
+			margin-bottom: 100px;
+		}
+
+		@include bigMobile {
+			margin-bottom: 80px;
+			font-size: 25px;
+		}
+	}
+
+	&__image {
+		order: -2;
+		width: clamp(100px, 27vw, 400px);
+		margin-right: 73px;
+
+		@include desktop {
+			order: 0;
+			margin-right: 0;
+		}
+	}
+
+	&__details {
+		margin-top: 88px;
+		margin-bottom: 47px;
+		width: 450px;
+		@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 400);
+		line-height: 40px;
+
+		@include desktop {
+			order: -1;
+			margin-top: 0;
+			margin-bottom: 61px;
+		}
+
+		@include bigMobile {
+			width: 300px;
+			margin-bottom: 49px;
+		}
+
+		&-wrapper {
+			@include flex($direction: column);
+			margin-bottom: 250px;
+			max-height: 50px;
+
+			@include desktop {
+				order: -1;
+			}
+
+			@include bigMobile {
+				align-items: center;
+				margin-bottom: 132px;
+			}
+
+			&_active {
+				margin-bottom: 0;
+				max-height: 450px;
+			}
+		}
+
+		&[open] > &-summary {
+			background-color: $greenSummaryBg;
+		}
+
+		&[open] > &-summary > &-svg {
+			transform: rotate(180deg);
+			fill: $greenColor-139;
+		}
+
+		&-summary {
+			@include flex($justify: space-between, $alignItems: center);
+			@include sizes(450px, 50px);
+			padding: 0 35px 0 20px;
+			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+			background: $greyColor-214;
+			color: $greyColor-113;
+			text-align: left;
+			cursor: pointer;
+			transition: all 0.5s ease;
+
+			@include bigMobile {
+				padding-right: 20px;
+				width: 300px;
+			}
+
+			&:hover {
+				background: $greenSummaryBg;
+				box-shadow: none;
+			}
+
+			&_active {
+				background-color: $greenSummaryBg;
+				box-shadow: none;
+			}
+		}
+
+		&-svg {
+			@include sizes(16px, 16px);
+			transition: transform 0.5s ease;
+			fill: $greyColor-174;
+		}
+
+		&-inner {
+			cursor: pointer;
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+
+			&-summary {
+				width: 380px;
+				height: 35px;
+				padding-left: 20px;
+				border-bottom: 1px solid $greyColor-217;
+				font-size: 16px;
+				text-align: left;
+				transition: all 0.5s ease;
+				cursor: pointer;
+				color: $greenColor-73;
+
+				@include bigMobile {
+					width: 240px;
+				}
+
+				@include hover {
+					&:hover {
+						border-bottom: 1px solid $greyColor-113;
+						color: $greyColor-113;
+					}
+				}
+
+				&:active {
+					border-bottom: 1px solid $greyColor-113;
+					color: $greyColor-113;
+				}
+			}
+		}
+
+		&-bottom {
+			@include sizes(450px, 234px);
+			padding: 27px 50px 31px 20px;
+			background: $greyColor-220;
+
+			@include bigMobile {
+				width: 300px;
+			}
+		}
+	}
+	&__popUp {
+		@include sizes(448px, 214px);
+		padding: 17px 76px 32px 35px;
+		border: 1px solid $blackColor;
+		border-radius: 20px;
+		@include font($family: Inter, $fz: 16px, $fs: normal, $fw: 400);
+		line-height: 40px;
+		background: $greenBg;
+		text-align: left;
+		transition: transform 0.5s ease;
+		transform: translateX(200%);
+
+		@include desktop {
+			margin-bottom: 14px;
+		}
+
+		@include bigMobile {
+			width: 282px;
+			padding: 23px 36px;
+		}
+
+		&_active {
+			transform: translateX(0);
+		}
+
+		&-wrapper {
+			@include flex($direction: row);
+			@include sizes(337px, 165px);
+		}
+
+		&-info {
+			@include flex($direction: column);
+			margin-right: 12px;
+			color: $blackColor;
+
+			@include bigMobile {
+				margin-right: 5px;
+				max-width: 65px;
+				line-height: 20px;
+
+				& p:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		&-value {
+			@include flex($direction: column);
+			color: $greyColor-113;
+
+			& p:last-of-type {
+				margin-bottom: 22px;
+			}
+
+			@include bigMobile {
+				max-width: 146px;
+				line-height: 20px;
+
+				& p:not(:last-of-type) {
+					margin-bottom: 20px;
+				}
+
+				& p:last-of-type {
+					margin-bottom: 17px;
+				}
+			}
+		}
+
+		&-link {
+			@include sizes(122px, 26px);
+			padding: 7px 29px;
+			border: 1px solid $orangeColor;
+			border-radius: 5px;
+			@include font($family: Inika, $fz: 10px, $fs: normal, $fw: 700);
+			line-height: 13px;
+			letter-spacing: 0;
+			text-align: center;
+			color: $greyColor-113;
+			background-color: transparent;
+			transition: all 0.5s ease;
+			cursor: pointer;
+
+			@include hover {
+				&:hover {
+					background-color: $orangeColor;
+					color: $whiteColor;
+				}
+			}
+
+			&:active {
+				background-color: $orangeColor;
+				color: $whiteColor;
+			}
+		}
+	}
+}

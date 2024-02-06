@@ -1,0 +1,118 @@
+.welcome {
+	background-color: $greenBg;
+
+	&__inner {
+		@include flex($alignItems: center);
+		padding: 50px 0;
+
+		@include desktop {
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			padding: 40px 0 70px 0;
+		}
+
+		@include bigMobile {
+			padding: 24px 0;
+		}
+	}
+
+	&__image {
+		width: clamp(280px, 31vw, 449px);
+		margin-right: 224px;
+
+		@include desktop {
+			margin-right: 0;
+			align-self: flex-start;
+		}
+
+		@include bigMobile {
+			display: none;
+		}
+	}
+
+	&__info {
+		font-family: Inter;
+		font-style: normal;
+
+		@include desktop {
+			margin-right: 15px;
+		}
+	}
+
+	&__info-title {
+		margin-bottom: 42px;
+		padding-top: 36px;
+		font-size: 45px;
+		font-weight: 700;
+		line-height: 50px;
+		letter-spacing: 0;
+		color: $greyColor-113;
+
+		@include desktop {
+			padding-top: 0;
+			margin-bottom: 30px;
+			font-size: 35px;
+		}
+
+		@include bigMobile {
+			margin-bottom: 20px;
+			font-size: 25px;
+			line-height: 35px;
+		}
+
+		&_green {
+			color: $greenColor-73;
+		}
+	}
+
+	&__info-subtitle {
+		margin-bottom: 48px;
+		@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 400);
+		line-height: 35px;
+		letter-spacing: 0;
+		color: $greyColor-99;
+
+		@include desktop {
+			margin-bottom: 30px;
+			font-size: 16px;
+			line-height: 25px;
+		}
+
+		@include bigMobile {
+			margin-bottom: 28px;
+		}
+	}
+
+	&__info-btn {
+		@include sizes(158px, 44px);
+		border-radius: 10px;
+		border: 2px solid $orangeColor;
+		background: rgba(224, 103, 51, 0);
+		cursor: pointer;
+		transition:
+			color 0.3s ease,
+			background-color 0.6s ease-in;
+		color: $blackColor;
+
+		@include bigMobile {
+			@include sizes(100px, 34px);
+			font-size: 10px;
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				background-color: $orangeColor;
+				color: $whiteColor;
+			}
+		}
+
+		&:focus {
+			border-color: $redColor;
+		}
+
+		&:active {
+			background-color: $orangeColor;
+			color: $whiteColor;
+		}
+	}
+}

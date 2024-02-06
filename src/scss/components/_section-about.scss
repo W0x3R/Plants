@@ -1,0 +1,71 @@
+.about {
+	background-color: $whiteColor;
+
+	&__inner {
+		@include flex($alignItems: center);
+		padding: 93px 0;
+
+		@include desktop {
+			flex-direction: column;
+			padding: 40px 0 95px 0;
+		}
+
+		@include bigMobile() {
+			padding: 30px 0;
+		}
+	}
+
+	&__info {
+		max-width: 605px;
+		margin-right: 153px;
+
+		&-image {
+			width: clamp(150px, 33vw, 462px);
+			margin-top: 22px;
+		}
+
+		@include desktop {
+			margin-right: 0;
+			max-width: 668px;
+		}
+	}
+
+	&__info-title {
+		margin-bottom: 40px;
+		padding-top: 36px;
+		color: $greenColor-73;
+
+		@include desktop {
+			padding-top: 0;
+			margin-bottom: 53px;
+			text-align: center;
+			text-wrap: balance;
+		}
+
+		@include bigMobile() {
+			margin-bottom: 16px;
+		}
+
+		&_orange {
+			color: $orangeColor;
+		}
+	}
+
+	&__info-subtitle {
+		@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 400);
+		line-height: 30px;
+		letter-spacing: 0;
+		color: $greyColor-99;
+
+		@include desktop {
+			margin-bottom: 40px;
+			text-align: left;
+		}
+
+		@include bigMobile() {
+			margin-bottom: 0;
+			font-size: 14px;
+			line-height: 25px;
+		}
+	}
+}
