@@ -1,5 +1,6 @@
 .contacts {
 	background-color: $greenBg;
+	overflow: hidden;
 
 	.container {
 		@include desktop {
@@ -28,13 +29,13 @@
 
 	&__title {
 		@include font($family: Inika, $fz: 40px, $fs: normal, $fw: 700);
-		color: $greenColor;
 		line-height: normal;
+		color: $greenColor-73;
 		text-align: center;
 
 		@include desktop {
-			margin-bottom: 100px;
 			order: -1;
+			margin-bottom: 100px;
 		}
 
 		@include bigMobile {
@@ -44,8 +45,8 @@
 	}
 
 	&__image {
-		width: clamp(100px, 27vw, 400px);
 		order: -2;
+		width: clamp(100px, 27vw, 400px);
 		margin-right: 73px;
 
 		@include desktop {
@@ -55,13 +56,15 @@
 	}
 
 	&__details {
-		width: 450px;
 		margin-top: 88px;
 		margin-bottom: 47px;
+		width: 450px;
+		@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 400);
+		line-height: 40px;
 
 		@include desktop {
-			margin-top: 0;
 			order: -1;
+			margin-top: 0;
 			margin-bottom: 61px;
 		}
 
@@ -91,52 +94,45 @@
 		}
 
 		&[open] > &-summary {
-			background-color: rgb(193, 230, 152);
+			background-color: $greenSummaryBg;
 		}
 
 		&[open] > &-summary > &-svg {
 			transform: rotate(180deg);
-			fill: rgb(139, 160, 126);
+			fill: $greenColor-139;
 		}
 
 		&-summary {
-			padding: 0 20px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			width: 450px;
-			height: 50px;
+			@include flex($justify: space-between, $alignItems: center);
+			@include sizes(450px, 50px);
+			padding: 0 35px 0 20px;
 			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-			background: rgb(214, 231, 210);
-			color: rgb(113, 113, 113);
-			font-family: Inter;
-			font-size: 20px;
-			font-weight: 400;
-			line-height: 40px;
+			background: $greyColor-214;
+			color: $greyColor-113;
 			text-align: left;
 			cursor: pointer;
 			transition: all 0.5s ease;
 
 			@include bigMobile {
+				padding-right: 20px;
 				width: 300px;
 			}
 
 			&:hover {
-				background: rgb(193, 230, 152);
+				background: $greenSummaryBg;
 				box-shadow: none;
 			}
 
 			&_active {
-				background-color: rgb(193, 230, 152);
+				background-color: $greenSummaryBg;
 				box-shadow: none;
 			}
 		}
 
 		&-svg {
-			width: 18px;
-			height: 18px;
+			@include sizes(16px, 16px);
 			transition: transform 0.5s ease;
-			fill: rgb(174, 161, 161);
+			fill: $greyColor-174;
 		}
 
 		&-inner {
@@ -150,34 +146,35 @@
 				width: 380px;
 				height: 35px;
 				padding-left: 20px;
-				color: rgb(113, 113, 113);
-				font-family: Inter;
+				border-bottom: 1px solid $greyColor-217;
 				font-size: 16px;
-				font-weight: 400;
-				line-height: 40px;
-				letter-spacing: 5%;
 				text-align: left;
-				border-bottom: 1px solid rgb(217, 217, 217);
 				transition: all 0.5s ease;
 				cursor: pointer;
-				color: rgb(73, 154, 24);
+				color: $greenColor-73;
 
 				@include bigMobile {
 					width: 240px;
 				}
 
-				&:hover {
-					color: rgb(113, 113, 113);
-					border-bottom: 1px solid rgb(113, 113, 113);
+				@include hover {
+					&:hover {
+						border-bottom: 1px solid $greyColor-113;
+						color: $greyColor-113;
+					}
+				}
+
+				&:active {
+					border-bottom: 1px solid $greyColor-113;
+					color: $greyColor-113;
 				}
 			}
 		}
 
 		&-bottom {
-			background: rgb(220, 233, 217);
-			width: 450px;
-			height: 234px;
+			@include sizes(450px, 234px);
 			padding: 27px 50px 31px 20px;
+			background: $greyColor-220;
 
 			@include bigMobile {
 				width: 300px;
@@ -185,17 +182,13 @@
 		}
 	}
 	&__popUp {
-		width: 448px;
-		height: 214px;
-		border: 1px solid rgb(0, 0, 0);
-		border-radius: 20px;
-		background: rgb(237, 242, 236);
+		@include sizes(448px, 214px);
 		padding: 17px 76px 32px 35px;
-		font-family: Inter;
-		font-size: 16px;
-		font-weight: 400;
+		border: 1px solid $blackColor;
+		border-radius: 20px;
+		@include font($family: Inter, $fz: 16px, $fs: normal, $fw: 400);
 		line-height: 40px;
-		letter-spacing: 5%;
+		background: $greenBg;
 		text-align: left;
 		transition: transform 0.5s ease;
 		transform: translateX(200%);
@@ -215,14 +208,13 @@
 
 		&-wrapper {
 			@include flex($direction: row);
-			width: 337px;
-			height: 165px;
+			@include sizes(337px, 165px);
 		}
 
 		&-info {
-			color: rgb(0, 0, 0);
 			@include flex($direction: column);
 			margin-right: 12px;
+			color: $blackColor;
 
 			@include bigMobile {
 				margin-right: 5px;
@@ -236,11 +228,12 @@
 		}
 
 		&-value {
+			@include flex($direction: column);
+			color: $greyColor-113;
+
 			& p:last-of-type {
 				margin-bottom: 22px;
 			}
-			color: rgb(113, 113, 113);
-			@include flex($direction: column);
 
 			@include bigMobile {
 				max-width: 146px;
@@ -257,26 +250,29 @@
 		}
 
 		&-link {
-			width: 122px;
-			height: 26px;
+			@include sizes(122px, 26px);
 			padding: 7px 29px;
-			box-sizing: border-box;
-			border: 1px solid rgb(224, 103, 51);
+			border: 1px solid $orangeColor;
 			border-radius: 5px;
-			color: rgb(113, 113, 113);
-			font-family: Inika;
-			font-size: 10px;
-			font-weight: 700;
+			@include font($family: Inika, $fz: 10px, $fs: normal, $fw: 700);
 			line-height: 13px;
-			letter-spacing: 0%;
+			letter-spacing: 0;
 			text-align: center;
+			color: $greyColor-113;
 			background-color: transparent;
 			transition: all 0.5s ease;
 			cursor: pointer;
 
-			&:hover {
+			@include hover {
+				&:hover {
+					background-color: $orangeColor;
+					color: $whiteColor;
+				}
+			}
+
+			&:active {
 				background-color: $orangeColor;
-				color: $whiteBg;
+				color: $whiteColor;
 			}
 		}
 	}

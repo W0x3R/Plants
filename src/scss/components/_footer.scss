@@ -1,12 +1,12 @@
 .footer {
-	background-color: $whiteBg;
+	background-color: $whiteColor;
 
 	&__inner {
-		padding: 10px 0;
 		@include flex($justify: space-between, $alignItems: center);
+		padding: 10px 0;
 		@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 400);
-		color: #000;
 		line-height: 50px;
+		color: $blackColor;
 
 		@include desktop {
 			flex-direction: column;

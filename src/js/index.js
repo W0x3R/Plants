@@ -161,7 +161,7 @@ const city = {
 const contactsDetails = document.querySelector('.contacts__details')
 const contactsDetailsWrapper = document.querySelector('.contacts__details-wrapper')
 const contactDetailsSummary = document.querySelector('.contacts__details-summary')
-const contactDetailsSummaryText = contactDetailsSummary.querySelector('p')
+const contactDetailsSummaryText = contactDetailsSummary.querySelector('span')
 
 const popUp = document.querySelector('.contacts__popUp')
 const popUpValues = document.querySelectorAll('.contacts__popUp-value p')
