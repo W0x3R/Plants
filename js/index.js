@@ -4,13 +4,13 @@
 /* 1 */
 /***/ (function() {
 
-var body = document.body;
+var html = document.documentElement;
 var header = document.querySelector('.header');
 var burger = document.querySelector('.burger');
 var burgerLine = document.querySelectorAll('.burger__line');
 var navList = document.querySelector('.nav__list');
 function manageStateBurger(value) {
-  body.classList[value]('body_active');
+  html.classList[value]('html_active');
   burger.classList[value]('burger_active');
   burgerLine.forEach(function (e) {
     return e.classList[value]('burger__line_active');

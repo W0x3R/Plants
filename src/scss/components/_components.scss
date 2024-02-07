@@ -1,4 +1,4 @@
-.body_active {
+.html_active {
 	overflow: hidden;
 }
 
@@ -26,6 +26,10 @@
 	&_active {
 		@include sizes(34px, 28px);
 		right: 20px;
+
+		@include bigMobile {
+			right: 3px;
+		}
 	}
 
 	@include bigMobile {
