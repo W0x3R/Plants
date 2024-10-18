@@ -1,0 +1,6 @@
+import "./style.scss"
+import * as burger from "./js/burger.js"
+import * as blur from "./js/service-blur.js"
+import * as pricesDropdown from "./js/prices-dropdown.js"
+import * as contactsDropdown from "./js/contacts-dropdown.js"
+import * as setYear from "./js/footer-setYear"
