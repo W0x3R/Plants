@@ -19,3 +19,9 @@ $small-mobile: 380px;
 		@content;
 	}
 }
+
+@mixin touchScreenDevices {
+	@media (hover: none) and (pointer: coarse) {
+		@content
+	}
+}
