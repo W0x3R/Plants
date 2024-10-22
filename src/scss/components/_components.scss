@@ -86,8 +86,8 @@
 	@include sizes(161px, 50px);
 	border: 1px solid $orangeColor;
 	border-radius: 5px;
-	@include font($family: Inika, $fz: 20px, $fs: normal, $fw: 400);
-	line-height: normal;
+	font-family: 'Inika';
+	font-size: 20px;
 	color: $orangeColor;
 	background-color: transparent;
 	cursor: pointer;
