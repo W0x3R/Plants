@@ -31,12 +31,13 @@
 			@include touchScreenDevices {
 				right: 3px;
 			}
-
 		}
 	}
 
 	@include bigMobile {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		gap: 6px 0;
 	}
 
 	&__line {
