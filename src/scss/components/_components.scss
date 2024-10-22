@@ -49,8 +49,8 @@
 			width: 34px;
 			border-bottom: 2px solid $whiteColor;
 
-			&:nth-of-type(1) {
-				transform: translate(300%);
+			&:nth-child(3n+1) {
+				display: none;
 			}
 
 			&:nth-of-type(2) {
@@ -61,10 +61,6 @@
 			&:nth-of-type(3) {
 				transform: rotate(-45deg);
 				top: 12px;
-			}
-
-			&:nth-of-type(4) {
-				transform: translate(300%);
 			}
 		}
 	}
