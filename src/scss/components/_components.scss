@@ -41,8 +41,7 @@
 
 	&__line {
 		position: absolute;
-		display: inline-block;
-		width: 40px;
+		width: 100%;
 		border-bottom: 2px solid $blackColor;
 		transition: transform 0.2s ease;
 
