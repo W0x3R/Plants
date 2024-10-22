@@ -93,7 +93,7 @@
 	cursor: pointer;
 	transition:
 		color 0.2s ease,
-		background-color 0.4s ease-in;
+		background-color 0.3s ease-in;
 
 	@include bigMobile {
 		@include sizes(120px, 35px);
