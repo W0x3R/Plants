@@ -45,6 +45,7 @@
 		transition: transform 0.1s ease-in;
 
 		&_active {
+			position: absolute;
 			width: 34px;
 			border-bottom: 2px solid $whiteColor;
 
