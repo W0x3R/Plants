@@ -28,7 +28,10 @@
 		right: 20px;
 
 		@include bigMobile {
-			right: 3px;
+			@include touchScreenDevices {
+				right: 3px;
+			}
+
 		}
 	}
 
