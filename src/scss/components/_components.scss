@@ -41,26 +41,8 @@
 	}
 
 	&__line {
-		position: absolute;
-		width: 100%;
 		border-bottom: 2px solid $blackColor;
-		transition: transform 0.2s ease;
-
-		&:nth-of-type(1) {
-			top: 0px;
-		}
-
-		&:nth-of-type(2) {
-			top: 8px;
-		}
-
-		&:nth-of-type(3) {
-			top: 16px;
-		}
-
-		&:nth-of-type(4) {
-			top: 24px;
-		}
+		transition: transform 0.1s ease-in;
 
 		&_active {
 			width: 34px;
