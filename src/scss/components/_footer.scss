@@ -22,7 +22,8 @@
 	}
 
 	&__github-link {
-		@include flex($gap: 10px);
+		display: flex;
+		gap: 0 10px;
 		transition: 0.5s ease;
 
 		@include desktop {
