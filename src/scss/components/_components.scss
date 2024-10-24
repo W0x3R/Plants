@@ -101,14 +101,8 @@
 	}
 
 	@include hover {
-		&:hover {
-			background-color: $orangeColor;
-			color: $whiteColor;
-		}
-	}
-
-	&:focus {
-		border-color: $redColor;
+		background-color: $orangeColor;
+		color: $whiteColor;
 	}
 
 	&_active {
