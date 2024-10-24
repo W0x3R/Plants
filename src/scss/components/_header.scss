@@ -5,7 +5,9 @@
 	color: $linksNavColor;
 
 	&__inner {
-		@include flex($justify: space-between, $alignItems: center);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		padding: 42px 0;
 
 		@include desktop {
