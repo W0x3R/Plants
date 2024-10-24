@@ -43,7 +43,7 @@
 			text-wrap: balance;
 		}
 
-		@include bigMobile() {
+		@include bigMobile {
 			margin-bottom: 16px;
 		}
 
