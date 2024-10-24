@@ -26,3 +26,17 @@
 		}
 	}
 }
+
+@mixin hoverAndActive {
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+
+	@media (hover: none) {
+		&:hover {
+			@content;
+		}
+	}
+}
