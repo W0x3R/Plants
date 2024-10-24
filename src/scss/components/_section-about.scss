@@ -2,7 +2,8 @@
 	background-color: $whiteColor;
 
 	&__inner {
-		@include flex($alignItems: center);
+		display: flex;
+		align-items: center;
 		padding: 93px 0;
 
 		@include desktop {
