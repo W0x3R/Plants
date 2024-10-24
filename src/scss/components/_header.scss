@@ -17,7 +17,9 @@
 }
 
 .logo {
-	@include flex($alignItems: center, $gap: 2px);
+	display: flex;
+	align-items: center;
+	gap: 0 2px;
 
 	@include bigMobile {
 		letter-spacing: 0;
