@@ -13,7 +13,8 @@
 	}
 
 	&__inner {
-		@include flex($justify: space-between, $alignItems: flex-start);
+		display: flex;
+		justify-content: space-between;
 		padding-top: 52px;
 
 		@include desktop {
