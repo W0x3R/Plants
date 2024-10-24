@@ -4,7 +4,6 @@
 	&__inner {
 		@include flex($justify: space-between, $alignItems: center);
 		padding: 40px 0;
-		font-family: 'Inter';
 		font-size: 20px;
 		line-height: 50px;
 		color: $blackColor;
