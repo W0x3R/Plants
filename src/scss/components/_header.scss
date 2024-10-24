@@ -32,7 +32,8 @@
 
 .nav {
 	&__list {
-		@include flex($gap: 39px);
+		display: flex;
+		gap: 0 39px;
 
 		@include bigMobile {
 			position: absolute;
