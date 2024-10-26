@@ -72,7 +72,8 @@
 		}
 
 		&-wrapper {
-			@include flex($direction: column);
+			display: flex;
+			flex-direction: column;
 			margin-bottom: 250px;
 			max-height: 50px;
 
