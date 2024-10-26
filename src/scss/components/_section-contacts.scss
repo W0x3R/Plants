@@ -29,10 +29,10 @@
 	}
 
 	&__title {
-		@include font($family: Inika, $fz: 40px, $fs: normal, $fw: 700);
+		font-family: 'Inika';
+		font-size: 40px;
 		line-height: normal;
 		color: $greenColor-73;
-		text-align: center;
 
 		@include desktop {
 			order: -1;
