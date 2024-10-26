@@ -92,11 +92,12 @@
 			}
 		}
 
-		&[open] > &-summary {
+		&[open]>&-summary {
 			background-color: $greenSummaryBg;
+			box-shadow: none;
 		}
 
-		&[open] > &-summary > &-svg {
+		&[open]>&-summary>&-svg {
 			transform: rotate(180deg);
 			fill: $greenColor-139;
 		}
