@@ -57,10 +57,8 @@
 	}
 
 	&__details {
-		margin-top: 88px;
-		margin-bottom: 47px;
-		width: 450px;
-		@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 400);
+		margin: 88px 0 47px;
+		font-size: 20px;
 		line-height: 40px;
 
 		@include desktop {
