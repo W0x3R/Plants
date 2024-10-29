@@ -169,15 +169,15 @@
 			}
 		}
 	}
+
 	&__popUp {
 		@include sizes(448px, 214px);
 		padding: 17px 76px 32px 35px;
 		border: 1px solid $blackColor;
 		border-radius: 20px;
-		@include font($family: Inter, $fz: 16px, $fs: normal, $fw: 400);
+		font-size: 16px;
 		line-height: 40px;
 		background: $greenBg;
-		text-align: left;
 		transition: transform 0.5s ease;
 		transform: translateX(200%);
 
