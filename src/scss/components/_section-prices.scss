@@ -19,9 +19,11 @@
 	}
 
 	&__contacts {
-		@include flex($direction: column, $alignItems: flex-end);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
 
-		@include bigMobile() {
+		@include bigMobile {
 			align-items: center;
 		}
 
