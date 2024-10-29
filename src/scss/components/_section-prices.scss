@@ -127,20 +127,16 @@
 
 		&-btn {
 			position: relative;
-			@include flex($direction: column);
+			display: flex;
+			flex-direction: column;
 			padding: 16px 41px;
 			width: 250px;
-			max-height: 50px;
-			border: 0;
+			max-height: 48px;
 			border-radius: 20px;
-			font-size: 20px;
-			font-weight: 700;
-			line-height: 20px;
-			text-align: left;
 			background: $greenBg;
 			cursor: pointer;
 			overflow: hidden;
-			transition: max-height 0.4s ease-in;
+			transition: max-height 0.3s ease-in;
 
 			&_active {
 				max-height: 155px;
