@@ -226,7 +226,7 @@
 		}
 
 		&-order {
-			@include sizes(86px,25px);
+			@include sizes(86px, 25px);
 			padding: 3px 20px;
 			border-radius: 10px;
 			background: $whiteColor;
@@ -245,20 +245,13 @@
 				font-size: 13px;
 			}
 
-			@include hover {
-				&:hover {
-					color: $whiteColor;
-					background-color: $orangeColor;
-				}
+			@include hoverAndActive {
+				color: $whiteColor;
+				background-color: $orangeColor;
 			}
 
 			&:focus {
 				border-color: $redColor;
-			}
-
-			&:active {
-				color: $whiteColor;
-				background-color: $orangeColor;
 			}
 		}
 	}
