@@ -119,14 +119,12 @@
 				width: 300px;
 			}
 
-			&:hover {
+			@include hover {
 				background: $greenSummaryBg;
-				box-shadow: none;
 			}
 
 			&_active {
 				background-color: $greenSummaryBg;
-				box-shadow: none;
 			}
 		}
 
