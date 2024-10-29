@@ -140,12 +140,10 @@
 			}
 
 			&-summary {
-				width: 380px;
-				height: 35px;
+				@include sizes(380px, 35px);
 				padding-left: 20px;
 				border-bottom: 1px solid $greyColor-217;
 				font-size: 16px;
-				text-align: left;
 				transition: all 0.5s ease;
 				cursor: pointer;
 				color: $greenColor-73;
