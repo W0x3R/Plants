@@ -103,13 +103,14 @@
 		}
 
 		&-summary {
-			@include flex($justify: space-between, $alignItems: center);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 			@include sizes(450px, 50px);
 			padding: 0 35px 0 20px;
 			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 			background: $greyColor-214;
 			color: $greyColor-113;
-			text-align: left;
 			cursor: pointer;
 			transition: all 0.5s ease;
 
