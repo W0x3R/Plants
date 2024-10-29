@@ -152,14 +152,7 @@
 					width: 240px;
 				}
 
-				@include hover {
-					&:hover {
-						border-bottom: 1px solid $greyColor-113;
-						color: $greyColor-113;
-					}
-				}
-
-				&:active {
+				@include hoverAndActive {
 					border-bottom: 1px solid $greyColor-113;
 					color: $greyColor-113;
 				}
