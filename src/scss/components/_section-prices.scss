@@ -3,17 +3,18 @@
 	color: $blackColor;
 
 	&__inner {
-		@include flex($justify: space-between);
-		padding: 58px 0 115px 0;
+		display: flex;
+		justify-content: space-between;
+		padding: 58px 0 115px;
 
 		@include desktop {
-			padding: 45px 0 88px 0;
+			padding: 45px 0 88px;
 		}
 
 		@include bigMobile {
 			flex-direction: column;
 			align-items: center;
-			padding: 35px 0 40px 0;
+			padding: 35px 0 40px;
 		}
 	}
 
