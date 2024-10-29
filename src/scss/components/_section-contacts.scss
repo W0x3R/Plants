@@ -195,7 +195,7 @@
 		}
 
 		&-wrapper {
-			@include flex($direction: row);
+			display: flex;
 			@include sizes(337px, 165px);
 		}
 
