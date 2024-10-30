@@ -59,15 +59,18 @@
 	}
 
 	&__cards {
-		@include flex($wrap: wrap, $justify: space-between);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		row-gap: 55px;
 
 		@include desktop {
 			justify-content: center;
-			gap: 0 90px;
+			gap: 38px 90px;
 		}
 
-		@include bigMobile() {
-			justify-content: center;
+		@include bigMobile {
+			row-gap: 30px;
 		}
 
 		&-figure_active {
