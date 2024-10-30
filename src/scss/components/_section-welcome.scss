@@ -2,13 +2,14 @@
 	background-color: $greenBg;
 
 	&__inner {
-		@include flex($alignItems: center);
+		display: flex;
+		align-items: center;
 		padding: 50px 0;
 
 		@include desktop {
 			flex-direction: row-reverse;
 			justify-content: space-between;
-			padding: 40px 0 70px 0;
+			padding: 40px 0 70px;
 		}
 
 		@include bigMobile {
