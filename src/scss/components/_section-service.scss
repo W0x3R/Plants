@@ -93,7 +93,8 @@
 		border: 1px solid $greyColor-227;
 		border-radius: 0px 0px 20px 20px;
 		border-top-width: 0px;
-		@include font($family: Inter, $fz: 20px, $fs: normal, $fw: 700);
+		font-size: 20px;
+		font-weight: 700;
 		line-height: 20px;
 		letter-spacing: 0;
 		text-align: center;
@@ -112,7 +113,6 @@
 
 			@include desktop {
 				margin-bottom: 20px;
-				text-align: center;
 			}
 		}
 	}
