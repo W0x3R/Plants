@@ -49,11 +49,12 @@
 	}
 
 	&__control-buttons {
-		@include flex($gap: 38px);
+		display: flex;
+		gap: 0 38px;
 
 		@include bigMobile {
 			flex-wrap: wrap;
-			gap: 10px;
+			gap: 0 10px;
 		}
 	}
 
