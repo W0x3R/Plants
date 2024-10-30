@@ -14,7 +14,8 @@
 	}
 
 	&__control {
-		@include flex($alignItems: center);
+		display: flex;
+		align-items: center;
 		margin-bottom: 80px;
 
 		&-btn {
