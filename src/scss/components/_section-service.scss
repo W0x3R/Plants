@@ -2,7 +2,7 @@
 	background-color: $greenBg;
 
 	&__inner {
-		padding: 43px 0 100px 0;
+		padding: 43px 0 100px;
 
 		@include desktop {
 			padding: 63px 0;
