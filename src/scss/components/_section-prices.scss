@@ -174,7 +174,6 @@
 		position: absolute;
 		right: 40px;
 		top: 17px;
-		@include sizes(16px, 16px);
 		transition: all 0.5s ease;
 		fill: $greyColor-217;
 		stroke: $whiteColor;
