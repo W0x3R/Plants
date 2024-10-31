@@ -104,7 +104,6 @@
 	}
 
 	&__details-svg {
-		@include sizes(16px, 16px);
 		transition: transform 0.5s ease;
 		fill: $greyColor-174;
 	}
