@@ -24,10 +24,6 @@
 	@include bigMobile {
 		letter-spacing: 0;
 	}
-
-	&__svg {
-		@include sizes(22px, 22px);
-	}
 }
 
 .nav {
