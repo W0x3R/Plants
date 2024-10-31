@@ -18,17 +18,15 @@
 		align-items: center;
 		margin-bottom: 80px;
 
-		&-btn {
-			&:active {
-				color: $greenColor-0;
-			}
-		}
-
 		@include desktop {
 			flex-direction: column;
 			align-items: flex-start;
 			margin-bottom: 40px;
 		}
+	}
+
+	&__control-btn:active {
+		color: $greenColor-0;
 	}
 
 	&__control-title {
@@ -72,17 +70,17 @@
 		@include bigMobile {
 			row-gap: 30px;
 		}
+	}
 
-		&-figure_active {
-			filter: blur(2px);
-		}
+	&__cards-figure_active {
+		filter: blur(2px);
+	}
 
-		&-image {
-			width: clamp(280px, 25vw, 330px);
+	&__cards-image {
+		width: clamp(280px, 25vw, 330px);
 
-			@include desktop {
-				height: 350px;
-			}
+		@include desktop {
+			height: 350px;
 		}
 	}
 

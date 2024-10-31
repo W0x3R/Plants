@@ -71,27 +71,6 @@
 			margin-bottom: 49px;
 		}
 
-		&-wrapper {
-			display: flex;
-			flex-direction: column;
-			margin-bottom: 250px;
-			max-height: 50px;
-
-			@include desktop {
-				order: -1;
-			}
-
-			@include bigMobile {
-				align-items: center;
-				margin-bottom: 132px;
-			}
-
-			&_active {
-				margin-bottom: 0;
-				max-height: 450px;
-			}
-		}
-
 		&[open]>&-summary {
 			background-color: $greenSummaryBg;
 			box-shadow: none;
@@ -101,72 +80,93 @@
 			transform: rotate(180deg);
 			fill: $greenColor-139;
 		}
+	}
 
-		&-summary {
-			display: flex;
-			justify-content: space-between;
+	&__details-wrapper {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 250px;
+		max-height: 50px;
+
+		@include desktop {
+			order: -1;
+		}
+
+		@include bigMobile {
 			align-items: center;
-			@include sizes(450px, 50px);
-			padding: 0 35px 0 20px;
-			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-			background: $greyColor-214;
+			margin-bottom: 132px;
+		}
+
+		&_active {
+			margin-bottom: 0;
+			max-height: 450px;
+		}
+	}
+
+	&__details-svg {
+		@include sizes(16px, 16px);
+		transition: transform 0.5s ease;
+		fill: $greyColor-174;
+	}
+
+	&__details-summary {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include sizes(450px, 50px);
+		padding: 0 35px 0 20px;
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+		background: $greyColor-214;
+		color: $greyColor-113;
+		cursor: pointer;
+		transition: all 0.5s ease;
+
+		@include bigMobile {
+			padding-right: 20px;
+			width: 300px;
+		}
+
+		@include hover {
+			background: $greenSummaryBg;
+		}
+
+		&_active {
+			background-color: $greenSummaryBg;
+		}
+	}
+
+	&__details-inner {
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__details-inner-summary {
+		@include sizes(380px, 35px);
+		padding-left: 20px;
+		border-bottom: 1px solid $greyColor-217;
+		font-size: 16px;
+		transition: all 0.5s ease;
+		cursor: pointer;
+		color: $greenColor-73;
+
+		@include bigMobile {
+			width: 240px;
+		}
+
+		@include hoverAndActive {
+			border-bottom: 1px solid $greyColor-113;
 			color: $greyColor-113;
-			cursor: pointer;
-			transition: all 0.5s ease;
-
-			@include bigMobile {
-				padding-right: 20px;
-				width: 300px;
-			}
-
-			@include hover {
-				background: $greenSummaryBg;
-			}
-
-			&_active {
-				background-color: $greenSummaryBg;
-			}
 		}
+	}
 
-		&-svg {
-			@include sizes(16px, 16px);
-			transition: transform 0.5s ease;
-			fill: $greyColor-174;
-		}
+	&__details-bottom {
+		@include sizes(450px, 234px);
+		padding: 27px 50px 31px 20px;
+		background: $greyColor-220;
 
-		&-inner {
-			&:not(:last-child) {
-				margin-bottom: 12px;
-			}
-
-			&-summary {
-				@include sizes(380px, 35px);
-				padding-left: 20px;
-				border-bottom: 1px solid $greyColor-217;
-				font-size: 16px;
-				transition: all 0.5s ease;
-				cursor: pointer;
-				color: $greenColor-73;
-
-				@include bigMobile {
-					width: 240px;
-				}
-
-				@include hoverAndActive {
-					border-bottom: 1px solid $greyColor-113;
-					color: $greyColor-113;
-				}
-			}
-		}
-
-		&-bottom {
-			@include sizes(450px, 234px);
-			padding: 27px 50px 31px 20px;
-			background: $greyColor-220;
-
-			@include bigMobile {
-				width: 300px;
-			}
+		@include bigMobile {
+			width: 300px;
 		}
 	}
 
@@ -193,69 +193,69 @@
 		&_active {
 			transform: translateX(0);
 		}
+	}
 
-		&-wrapper {
-			display: flex;
-			@include sizes(337px, 165px);
-		}
+	&__popUp-wrapper {
+		display: flex;
+		@include sizes(337px, 165px);
+	}
 
-		&-info {
-			display: flex;
-			flex-direction: column;
-			margin-right: 12px;
-			color: $blackColor;
+	&__popUp-info {
+		display: flex;
+		flex-direction: column;
+		margin-right: 12px;
+		color: $blackColor;
 
-			@include bigMobile {
-				margin-right: 5px;
-				max-width: 65px;
-				line-height: 20px;
+		@include bigMobile {
+			margin-right: 5px;
+			max-width: 65px;
+			line-height: 20px;
 
-				& p:not(:last-child) {
-					margin-bottom: 20px;
-				}
+			& p:not(:last-child) {
+				margin-bottom: 20px;
 			}
 		}
+	}
 
-		&-value {
-			display: flex;
-			flex-direction: column;
-			color: $greyColor-113;
+	&__popUp-value {
+		display: flex;
+		flex-direction: column;
+		color: $greyColor-113;
+
+		& p:last-of-type {
+			margin-bottom: 22px;
+		}
+
+		@include bigMobile {
+			max-width: 146px;
+			line-height: 20px;
+
+			& p:not(:last-of-type) {
+				margin-bottom: 20px;
+			}
 
 			& p:last-of-type {
-				margin-bottom: 22px;
-			}
-
-			@include bigMobile {
-				max-width: 146px;
-				line-height: 20px;
-
-				& p:not(:last-of-type) {
-					margin-bottom: 20px;
-				}
-
-				& p:last-of-type {
-					margin-bottom: 17px;
-				}
+				margin-bottom: 17px;
 			}
 		}
+	}
 
-		&-link {
-			@include sizes(122px, 26px);
-			padding: 7px 29px;
-			border: 1px solid $orangeColor;
-			border-radius: 5px;
-			@include font($family: Inika, $fz: 10px, $fs: normal, $fw: 700);
-			line-height: 13px;
-			letter-spacing: 0;
-			text-align: center;
-			color: $greyColor-113;
-			background-color: transparent;
-			transition: all 0.5s ease;
+	&__popUp-link {
+		@include sizes(122px, 26px);
+		padding: 7px 29px;
+		border: 1px solid $orangeColor;
+		border-radius: 5px;
+		@include font($family: Inika, $fz: 10px, $fs: normal, $fw: 700);
+		line-height: 13px;
+		letter-spacing: 0;
+		text-align: center;
+		color: $greyColor-113;
+		background-color: transparent;
+		transition: all 0.5s ease;
 
-			@include hoverAndActive {
-				background-color: $orangeColor;
-				color: $whiteColor;
-			}
+		@include hoverAndActive {
+			background-color: $orangeColor;
+			color: $whiteColor;
 		}
 	}
 }

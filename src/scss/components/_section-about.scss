@@ -20,15 +20,15 @@
 		max-width: 605px;
 		margin-right: 153px;
 
-		&-image {
-			width: clamp(150px, 33vw, 462px);
-			margin-top: 22px;
-		}
-
 		@include desktop {
 			margin-right: 0;
 			max-width: 668px;
 		}
+	}
+
+	&__info-image {
+		width: clamp(150px, 33vw, 462px);
+		margin-top: 22px;
 	}
 
 	&__info-title {
@@ -62,7 +62,7 @@
 			margin-bottom: 40px;
 		}
 
-		@include bigMobile() {
+		@include bigMobile {
 			margin-bottom: 0;
 			font-size: 14px;
 			line-height: 25px;
