@@ -1,3 +1,4 @@
+import { actionsServiceButtonsOnClick } from "../blurCards/actionsOnClickServiceButtons"
 import { setStateBurger } from "../burger/setState"
 import { actionsContactsDetailsOnClick } from "../contactsDropdown/actionsContactsDetailsOnClick"
 import { showActiveBlock } from "../pricesDropdown/showActiveBlock"
@@ -12,5 +13,6 @@ export const clickEvents = {
 		) {
 			showActiveBlock(e)
 		}
-	}
+	},
+	".service__control-buttons": (e) => actionsServiceButtonsOnClick(e)
 }
