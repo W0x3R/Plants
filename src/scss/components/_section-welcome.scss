@@ -4,7 +4,7 @@
 	&__inner {
 		display: flex;
 		align-items: center;
-		padding: 50px 0;
+		padding: 62px 0;
 
 		@include desktop {
 			flex-direction: row-reverse;
@@ -14,12 +14,13 @@
 
 		@include bigMobile {
 			padding: 24px 0;
+			justify-content: center;
 		}
 	}
 
 	&__image {
 		width: clamp(280px, 31vw, 449px);
-		margin-right: 224px;
+		margin-right: 230px;
 
 		@include desktop {
 			margin-right: 0;
@@ -39,7 +40,6 @@
 
 	&__info-title {
 		margin-bottom: 42px;
-		padding-top: 36px;
 		font-size: 45px;
 		line-height: 50px;
 		letter-spacing: 0;
@@ -52,7 +52,7 @@
 		}
 
 		@include bigMobile {
-			margin-bottom: 20px;
+			margin-bottom: 24px;
 			font-size: 25px;
 			line-height: 35px;
 		}
@@ -70,13 +70,16 @@
 		color: $greyColor-99;
 
 		@include desktop {
-			margin-bottom: 30px;
+			margin-bottom: 33px;
+			margin-left: 5px;
+			max-width: 340px;
 			font-size: 16px;
 			line-height: 25px;
 		}
 
 		@include bigMobile {
-			margin-bottom: 28px;
+			margin-left: 0;
+			margin-bottom: 26px;
 		}
 	}
 
