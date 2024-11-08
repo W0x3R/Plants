@@ -5,7 +5,7 @@ export const showActiveBlock = (e) => {
 	const target = e.target
 	const closestDiv = target.closest("div")
 	const closestSvg = Array.from(closestDiv.children).find(
-		(e) => e.tagName === "svg"
+		(e) => e.tagName === "SPAN"
 	)
 
 	if (activeButton && activeSvg) {
