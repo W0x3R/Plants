@@ -2,14 +2,14 @@
 	background-color: $greenBg;
 
 	&__inner {
-		padding: 43px 0 100px;
+		padding: 40px 0 121px;
 
 		@include desktop {
-			padding: 63px 0;
+			padding: 60px 0 70px;
 		}
 
 		@include bigMobile {
-			padding: 30px 0;
+			padding: 30px 0 27px;
 		}
 	}
 
@@ -30,7 +30,7 @@
 	}
 
 	&__control-title {
-		margin-right: 142px;
+		margin-right: 144px;
 		max-width: 306px;
 		color: $greenColor-73;
 		letter-spacing: 0;
@@ -49,10 +49,16 @@
 	&__control-buttons {
 		display: flex;
 		gap: 0 38px;
+		padding-top: 5px;
+
+		@include desktop {
+			padding-top: 0;
+
+		}
 
 		@include bigMobile {
 			flex-wrap: wrap;
-			gap: 0 10px;
+			gap: 10px;
 		}
 	}
 
@@ -64,28 +70,32 @@
 
 		@include desktop {
 			justify-content: center;
-			gap: 38px 90px;
+			gap: 38px 107px;
 		}
 
 		@include bigMobile {
-			row-gap: 30px;
+			row-gap: 35px;
 		}
 	}
+
 
 	&__cards-figure_blur {
 		filter: blur(2px);
 	}
 
 	&__cards-image {
-		width: clamp(280px, 25vw, 330px);
+		width: 329px;
 
 		@include desktop {
-			height: 350px;
+			width: 279px;
 		}
 	}
 
 	.figcaption {
-		width: clamp(280px, 25vw, 330px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 330px;
 		margin-top: -3px;
 		height: 100px;
 		border: 1px solid $greyColor-227;
@@ -95,12 +105,20 @@
 		font-weight: 700;
 		line-height: 20px;
 		letter-spacing: 0;
-		text-align: center;
+
+		@include desktop {
+			width: 279px;
+		}
 
 		&__title {
 			padding-top: 10px;
-			margin-bottom: 10px;
+			margin-bottom: 16px;
 			color: $orangeColor;
+
+			@include desktop {
+				padding-top: 10px;
+				margin-bottom: 10px;
+			}
 		}
 
 		&__subtitle {
@@ -111,6 +129,8 @@
 
 			@include desktop {
 				margin-bottom: 20px;
+				max-width: 203px;
+				text-align: center;
 			}
 		}
 	}
