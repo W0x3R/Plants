@@ -5,16 +5,16 @@
 	&__inner {
 		display: flex;
 		justify-content: space-between;
-		padding: 58px 0 115px;
+		padding: 40px 0 115px;
 
 		@include desktop {
-			padding: 45px 0 88px;
+			padding: 40px 0 88px;
 		}
 
 		@include bigMobile {
 			flex-direction: column;
 			align-items: center;
-			padding: 35px 0 40px;
+			padding: 23px 0 40px;
 		}
 	}
 
@@ -39,7 +39,7 @@
 
 		@include desktop {
 			padding-top: 100px;
-			margin-bottom: 32px;
+			margin-bottom: 29px;
 			font-size: 25px;
 			line-height: 35px;
 		}
@@ -58,7 +58,7 @@
 	}
 
 	&__contacts-btn {
-		margin-bottom: 51px;
+		margin-bottom: 39px;
 		font-weight: 700;
 
 		&:active {
@@ -97,6 +97,7 @@
 		margin-bottom: 60px;
 		font-size: 40px;
 		line-height: normal;
+		letter-spacing: 0;
 
 		@include desktop {
 			margin-bottom: 55px;
@@ -132,7 +133,7 @@
 		flex-direction: column;
 		padding: 16px 41px;
 		width: 250px;
-		max-height: 48px;
+		max-height: 50px;
 		border-radius: 20px;
 		background: $greenBg;
 		cursor: pointer;
@@ -149,7 +150,7 @@
 		}
 
 		@include bigMobile {
-			padding: 16px 25px;
+			padding: 16px 30px;
 			width: 180px;
 			font-size: 15px;
 
@@ -171,19 +172,27 @@
 	}
 
 	&__buttons-svg {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
 		position: absolute;
 		right: 40px;
 		top: 17px;
+		@include sizes(16px, 16px);
+		background: $greyColor-217;
 		transition: all 0.5s ease;
-		fill: $greyColor-217;
-		stroke: $whiteColor;
-		stroke-width: 1.1px;
+		border-radius: 50%;
 
 		&_active {
 			transform: rotate(180deg);
-			fill: $greyColor-174;
+			background: $greyColor-174;
+
+			& path {
+				stroke: $whiteColor
+			}
 		}
 	}
+
 
 	&__buttons-text {
 		padding-top: 6px;
