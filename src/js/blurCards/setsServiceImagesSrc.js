@@ -10,7 +10,7 @@ import imageThirdSmall from "../../images/third-card-small.png"
 import imageFourthSmall from "../../images/fourth-card-small.png"
 import imageFifthSmall from "../../images/fifth-card-small.png"
 import imageSixthSmall from "../../images/sixth-card-small.png"
-import { debounce } from "../debounce"
+import { throttle } from "../throttle"
 
 const serviceCardsImages = document.querySelectorAll(".service__cards-image")
 const bigImages = [
@@ -33,4 +33,4 @@ export const setsServiceImagesSrc = () => {
 		card.src = getTemplateString(i)
 	})
 }
-export let setsServiceImagesSrcThrottle = debounce(setsServiceImagesSrc, 500)
+export let setsServiceImagesSrcThrottle = throttle(setsServiceImagesSrc, 150)
