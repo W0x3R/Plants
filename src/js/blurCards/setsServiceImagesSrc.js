@@ -13,21 +13,28 @@ import imageSixthSmall from "../../images/sixth-card-small.png"
 import { throttle } from "../throttle"
 
 const serviceCardsImages = document.querySelectorAll(".service__cards-image")
-const bigImages = [
-	"first-card",
-	"second-card",
-	"third-card",
-	"fourth-card",
-	"fifth-card",
-	"sixth-card"
+const imagesBig = [
+	imageFirst,
+	imageSecond,
+	imageThird,
+	imageFourth,
+	imageFifth,
+	imageSixth
+]
+
+const imagesSmall = [
+	imageFirstSmall,
+	imageSecondSmall,
+	imageThirdSmall,
+	imageFourthSmall,
+	imageFifthSmall,
+	imageSixthSmall
 ]
 
 export const setsServiceImagesSrc = () => {
 	const documentWidth = document.documentElement.clientWidth
 	const getTemplateString = (i) =>
-		documentWidth >= 1399
-			? `./assets/images/pictures/${bigImages[i]}.png`
-			: `./assets/images/pictures/${bigImages[i]}-small.png`
+		documentWidth >= 1399 ? imagesBig[i] : imagesSmall[i]
 
 	serviceCardsImages.forEach((card, i) => {
 		card.src = getTemplateString(i)
