@@ -29,42 +29,49 @@
 	}
 
 	&__title {
+		margin-top: 12px;
 		font-family: 'Inika';
 		font-size: 40px;
 		line-height: normal;
 		color: $greenColor-73;
+		letter-spacing: 0;
 
 		@include desktop {
 			order: -1;
-			margin-bottom: 100px;
+			margin: 3px 0 100px;
 		}
 
 		@include bigMobile {
-			margin-bottom: 80px;
+			margin: 0 0 80px;
 			font-size: 25px;
 		}
 	}
 
 	&__image {
 		order: -2;
-		width: clamp(100px, 27vw, 400px);
-		margin-right: 73px;
+		width: 400px;
+		margin-right: 50px;
 
 		@include desktop {
 			order: 0;
+			margin-left: 20px;
 			margin-right: 0;
+			width: max(100px, min(26vw, 400px));
+		}
+
+		@include bigMobile {
+			margin-left: 0;
 		}
 	}
 
 	&__details {
-		margin: 88px 0 47px;
+		margin: 100px 0 47px;
 		font-size: 20px;
 		line-height: 40px;
 
 		@include desktop {
 			order: -1;
-			margin-top: 0;
-			margin-bottom: 61px;
+			margin: 0 0 61px;
 		}
 
 		@include bigMobile {
