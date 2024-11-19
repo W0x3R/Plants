@@ -1,17 +1,21 @@
+@use '../media';
+@use '../mixins';
+@use '../variables';
+
 .header {
 	overflow-x: hidden;
 	font-family: 'Inika';
-	background-color: $greenBg;
-	color: $linksNavColor;
+	background-color: variables.$greenBg;
+	color: variables.$linksNavColor;
 
 	.container {
 		padding-left: 113px;
 
-		@include desktop {
+		@include media.desktop {
 			padding-left: 50px;
 		}
 
-		@include smallMobile {
+		@include media.smallMobile {
 			padding-left: 25px;
 		}
 	}
@@ -22,11 +26,9 @@
 		align-items: center;
 		padding: 42px 0;
 
-		@include desktop {
+		@include media.desktop {
 			padding: 35px 0;
 		}
-
-
 	}
 }
 
@@ -38,11 +40,11 @@
 	letter-spacing: 0;
 	margin-top: 10px;
 
-	@include bigMobile {
+	@include media.bigMobile {
 		letter-spacing: 0;
 	}
 
-	@include smallMobile {
+	@include media.smallMobile {
 		margin-top: 0;
 	}
 }
@@ -52,7 +54,7 @@
 		display: flex;
 		gap: 0 46px;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -60,12 +62,12 @@
 			align-items: center;
 			justify-content: center;
 			gap: 20px;
-			@include sizes(100dvw, 100dvh);
+			@include mixins.sizes(100dvw, 100dvh);
 			background-image: url('./images/burger-image.jpg');
 			background-size: cover;
 			transform: translateY(-200%);
 			transition: transform 0.3s ease-in-out;
-			color: $whiteColor;
+			color: variables.$whiteColor;
 			font-size: 32px;
 		}
 
@@ -79,13 +81,13 @@
 		transition: 0.2s ease;
 		letter-spacing: 0;
 
-		@include hover {
-			color: $orangeColor;
+		@include mixins.hover {
+			color: variables.$orangeColor;
 			font-weight: 700;
 		}
 
 		&:active {
-			color: $redColor;
+			color: variables.$redColor;
 		}
 	}
 }

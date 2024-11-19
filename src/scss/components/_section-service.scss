@@ -1,14 +1,18 @@
+@use '../media';
+@use '../mixins';
+@use '../variables';
+
 .service {
-	background-color: $greenBg;
+	background-color: variables.$greenBg;
 
 	&__inner {
 		padding: 40px 0 121px;
 
-		@include desktop {
+		@include media.desktop {
 			padding: 60px 0 70px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding: 30px 0 27px;
 		}
 	}
@@ -18,7 +22,7 @@
 		align-items: center;
 		margin-bottom: 80px;
 
-		@include desktop {
+		@include media.desktop {
 			flex-direction: column;
 			align-items: flex-start;
 			margin-bottom: 40px;
@@ -26,21 +30,21 @@
 	}
 
 	&__control-btn:active {
-		color: $greenColor-0;
+		color: variables.$greenColor-0;
 	}
 
 	&__control-title {
 		margin-right: 144px;
 		max-width: 306px;
-		color: $greenColor-73;
+		color: variables.$greenColor-73;
 		letter-spacing: 0;
 
-		@include desktop {
+		@include media.desktop {
 			margin-right: 0px;
 			margin-bottom: 40px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 35px;
 			max-width: 187px;
 		}
@@ -51,12 +55,12 @@
 		gap: 0 38px;
 		padding-top: 5px;
 
-		@include desktop {
+		@include media.desktop {
 			padding-top: 0;
 
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			flex-wrap: wrap;
 			gap: 10px;
 		}
@@ -68,12 +72,12 @@
 		justify-content: space-between;
 		row-gap: 55px;
 
-		@include desktop {
+		@include media.desktop {
 			justify-content: center;
 			gap: 38px 107px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			row-gap: 35px;
 		}
 	}
@@ -86,7 +90,7 @@
 	&__cards-image {
 		width: 329px;
 
-		@include desktop {
+		@include media.desktop {
 			width: 279px;
 		}
 	}
@@ -98,7 +102,7 @@
 		width: 330px;
 		margin-top: -3px;
 		height: 100px;
-		border: 1px solid $greyColor-227;
+		border: 1px solid variables.$greyColor-227;
 		border-radius: 0px 0px 20px 20px;
 		border-top-width: 0px;
 		font-size: 20px;
@@ -106,16 +110,16 @@
 		line-height: 20px;
 		letter-spacing: 0;
 
-		@include desktop {
+		@include media.desktop {
 			width: 279px;
 		}
 
 		&__title {
 			padding-top: 10px;
 			margin-bottom: 16px;
-			color: $orangeColor;
+			color: variables.$orangeColor;
 
-			@include desktop {
+			@include media.desktop {
 				padding-top: 10px;
 				margin-bottom: 10px;
 			}
@@ -123,11 +127,11 @@
 
 		&__subtitle {
 			margin-bottom: 36px;
-			color: $greyColor-113;
+			color: variables.$greyColor-113;
 			font-size: 16px;
 			font-weight: 400;
 
-			@include desktop {
+			@include media.desktop {
 				margin-bottom: 20px;
 				max-width: 203px;
 				text-align: center;

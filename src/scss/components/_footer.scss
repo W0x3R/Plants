@@ -1,22 +1,26 @@
+@use '../media';
+@use '../mixins';
+@use '../variables';
+
 .footer {
-	background-color: $whiteColor;
+	background-color: variables.$whiteColor;
 
 	&__inner {
-		@include flex($justify: space-between, $alignItems: center);
+		@include mixins.flex($justify: space-between, $alignItems: center);
 		padding: 40px 0;
 		font-size: 20px;
 		line-height: 50px;
 		letter-spacing: 0;
-		color: $blackColor;
+		color: variables.$blackColor;
 
-		@include desktop {
+		@include media.desktop {
 			flex-direction: column;
 			padding: 33px 0 18px;
 			font-size: 20px;
 			line-height: 24px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding: 22px 0 7px;
 		}
 	}
@@ -26,17 +30,17 @@
 		gap: 0 10px;
 		transition: 0.5s ease;
 
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 16px;
 		}
 
-		@include hoverAndActive {
-			color: $orangeColor;
+		@include mixins.hoverAndActive {
+			color: variables.$orangeColor;
 		}
 	}
 
 	&__date {
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 16px;
 		}
 	}
@@ -44,8 +48,8 @@
 	&__rss-link {
 		transition: 0.5s ease;
 
-		@include hoverAndActive {
-			color: $orangeColor;
+		@include mixins.hoverAndActive {
+			color: variables.$orangeColor;
 		}
 	}
 }

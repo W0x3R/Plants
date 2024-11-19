@@ -1,3 +1,7 @@
+@use '../media';
+@use '../mixins';
+@use '../variables';
+
 .body_no-scroll {
 	overflow: hidden;
 }
@@ -8,11 +12,11 @@
 	padding: 0 109px;
 	box-sizing: content-box;
 
-	@include desktop {
+	@include media.desktop {
 		padding: 0 50px;
 	}
 
-	@include bigMobile {
+	@include media.bigMobile {
 		padding: 0 25px;
 	}
 }
@@ -20,34 +24,34 @@
 .burger {
 	display: none;
 	position: relative;
-	@include sizes(40px, 24px);
+	@include mixins.sizes(40px, 24px);
 	cursor: pointer;
 
 	&_active {
-		@include sizes(34px, 28px);
+		@include mixins.sizes(34px, 28px);
 		right: 20px;
 
-		@include bigMobile {
-			@include touchScreenDevices {
+		@include media.bigMobile {
+			@include media.touchScreenDevices {
 				right: 3px;
 			}
 		}
 	}
 
-	@include bigMobile {
+	@include media.bigMobile {
 		display: flex;
 		flex-direction: column;
 		gap: 6px 0;
 	}
 
 	&__line {
-		border-bottom: 2px solid $blackColor;
+		border-bottom: 2px solid variables.$blackColor;
 		transition: transform 0.1s ease-in;
 
 		&_active {
 			position: absolute;
 			width: 34px;
-			border-bottom: 2px solid $whiteColor;
+			border-bottom: 2px solid variables.$whiteColor;
 
 			&:nth-child(3n+1) {
 				display: none;
@@ -67,59 +71,59 @@
 }
 
 .title {
-	@include font($family: Inika, $fz: 40px, $fs: normal, $fw: 400);
+	@include mixins.font($family: Inika, $fz: 40px, $fs: normal, $fw: 400);
 	line-height: 52px;
 
-	@include desktop {
+	@include media.desktop {
 		font-size: 35px;
 		line-height: 46px;
 		letter-spacing: 0;
 	}
 
-	@include bigMobile {
+	@include media.bigMobile {
 		line-height: 33px;
 		font-size: 25px;
 	}
 }
 
 .btn {
-	@include sizes(161px, 50px);
-	border: 1px solid $orangeColor;
+	@include mixins.sizes(161px, 50px);
+	border: 1px solid variables.$orangeColor;
 	border-radius: 5px;
 	font-family: 'Inika';
 	font-size: 20px;
-	color: $orangeColor;
+	color: variables.$orangeColor;
 	background-color: transparent;
 	transition:
 		color 0.2s ease,
 		background-color 0.3s ease-in;
 
-	@include bigMobile {
-		@include sizes(120px, 35px);
+	@include media.bigMobile {
+		@include mixins.sizes(120px, 35px);
 		font-size: 15px;
 	}
 
-	@include hover {
-		background-color: $orangeColor;
-		color: $whiteColor;
+	@include mixins.hover {
+		background-color: variables.$orangeColor;
+		color: variables.$whiteColor;
 	}
 
 	&_active {
-		background-color: $orangeColor;
-		color: $whiteColor;
+		background-color: variables.$orangeColor;
+		color: variables.$whiteColor;
 	}
 
 	&_disabled {
-		background-color: $blackColor;
-		color: $whiteColor;
+		background-color: variables.$blackColor;
+		color: variables.$whiteColor;
 		opacity: 0.5;
 		cursor: not-allowed;
 		transition:
 			color 0.2s ease;
 
-		@include hover {
-			background-color: $blackColor;
-			color: $whiteColor;
+		@include mixins.hover {
+			background-color: variables.$blackColor;
+			color: variables.$whiteColor;
 		}
 	}
 }

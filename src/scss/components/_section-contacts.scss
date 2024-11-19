@@ -1,13 +1,17 @@
+@use '../media';
+@use '../mixins';
+@use '../variables';
+
 .contacts {
-	background-color: $greenBg;
+	background-color: variables.$greenBg;
 	overflow: hidden;
 
 	.container {
-		@include desktop {
+		@include media.desktop {
 			padding: 0 159px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding: 0 42px;
 		}
 	}
@@ -17,13 +21,13 @@
 		justify-content: space-between;
 		padding-top: 52px;
 
-		@include desktop {
+		@include media.desktop {
 			flex-direction: column;
 			align-items: center;
 			padding-top: 40px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding-top: 25px;
 		}
 	}
@@ -33,15 +37,15 @@
 		font-family: 'Inika';
 		font-size: 40px;
 		line-height: normal;
-		color: $greenColor-73;
+		color: variables.$greenColor-73;
 		letter-spacing: 0;
 
-		@include desktop {
+		@include media.desktop {
 			order: -1;
 			margin: 3px 0 100px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin: 0 0 80px;
 			font-size: 25px;
 		}
@@ -52,14 +56,14 @@
 		width: 400px;
 		margin-right: 50px;
 
-		@include desktop {
+		@include media.desktop {
 			order: 0;
 			margin-left: 20px;
 			margin-right: 0;
 			width: max(100px, min(26vw, 400px));
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-left: 0;
 		}
 	}
@@ -69,23 +73,23 @@
 		font-size: 20px;
 		line-height: 40px;
 
-		@include desktop {
+		@include media.desktop {
 			order: -1;
 			margin: 0 0 61px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 49px;
 		}
 
 		&[open]>&-summary {
-			background-color: $greenSummaryBg;
+			background-color: variables.$greenSummaryBg;
 			box-shadow: none;
 		}
 
 		&[open]>&-summary>&-svg {
 			transform: rotate(180deg);
-			fill: $greenColor-139;
+			fill: variables.$greenColor-139;
 		}
 	}
 
@@ -95,11 +99,11 @@
 		margin-bottom: 250px;
 		max-height: 50px;
 
-		@include desktop {
+		@include media.desktop {
 			order: -1;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			align-items: center;
 			margin-bottom: 132px;
 		}
@@ -112,32 +116,32 @@
 
 	&__details-svg {
 		transition: transform 0.5s ease;
-		fill: $greyColor-174;
+		fill: variables.$greyColor-174;
 	}
 
 	&__details-summary {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		@include sizes(450px, 50px);
+		@include mixins.sizes(450px, 50px);
 		padding: 0 35px 0 20px;
 		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-		background: $greyColor-214;
-		color: $greyColor-113;
+		background: variables.$greyColor-214;
+		color: variables.$greyColor-113;
 		cursor: pointer;
 		transition: all 0.5s ease;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding-right: 20px;
 			width: 300px;
 		}
 
-		@include hover {
-			background: $greenSummaryBg;
+		@include mixins.hover {
+			background: variables.$greenSummaryBg;
 		}
 
 		&_active {
-			background-color: $greenSummaryBg;
+			background-color: variables.$greenSummaryBg;
 		}
 	}
 
@@ -148,50 +152,50 @@
 	}
 
 	&__details-inner-summary {
-		@include sizes(380px, 35px);
+		@include mixins.sizes(380px, 35px);
 		padding-left: 20px;
-		border-bottom: 1px solid $greyColor-217;
+		border-bottom: 1px solid variables.$greyColor-217;
 		font-size: 16px;
 		transition: all 0.5s ease;
 		cursor: pointer;
-		color: $greenColor-73;
+		color: variables.$greenColor-73;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			width: 240px;
 		}
 
-		@include hoverAndActive {
-			border-bottom: 1px solid $greyColor-113;
-			color: $greyColor-113;
+		@include mixins.hoverAndActive {
+			border-bottom: 1px solid variables.$greyColor-113;
+			color: variables.$greyColor-113;
 		}
 	}
 
 	&__details-bottom {
-		@include sizes(450px, 234px);
+		@include mixins.sizes(450px, 234px);
 		padding: 27px 50px 31px 20px;
-		background: $greyColor-220;
+		background: variables.$greyColor-220;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			width: 300px;
 		}
 	}
 
 	&__popUp {
-		@include sizes(448px, 214px);
+		@include mixins.sizes(448px, 214px);
 		padding: 17px 76px 32px 35px;
-		border: 1px solid $blackColor;
+		border: 1px solid variables.$blackColor;
 		border-radius: 20px;
 		font-size: 16px;
 		line-height: 40px;
-		background: $greenBg;
+		background: variables.$greenBg;
 		transition: transform 0.5s ease;
 		transform: translateX(200%);
 
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 14px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			width: 282px;
 			padding: 23px 36px;
 		}
@@ -203,16 +207,16 @@
 
 	&__popUp-wrapper {
 		display: flex;
-		@include sizes(337px, 165px);
+		@include mixins.sizes(337px, 165px);
 	}
 
 	&__popUp-info {
 		display: flex;
 		flex-direction: column;
 		margin-right: 12px;
-		color: $blackColor;
+		color: variables.$blackColor;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-right: 5px;
 			max-width: 65px;
 			line-height: 20px;
@@ -226,13 +230,13 @@
 	&__popUp-value {
 		display: flex;
 		flex-direction: column;
-		color: $greyColor-113;
+		color: variables.$greyColor-113;
 
 		& p:last-of-type {
 			margin-bottom: 22px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			max-width: 146px;
 			line-height: 20px;
 
@@ -247,21 +251,21 @@
 	}
 
 	&__popUp-link {
-		@include sizes(122px, 26px);
+		@include mixins.sizes(122px, 26px);
 		padding: 7px 29px;
-		border: 1px solid $orangeColor;
+		border: 1px solid variables.$orangeColor;
 		border-radius: 5px;
-		@include font($family: Inika, $fz: 10px, $fs: normal, $fw: 700);
+		@include mixins.font($family: Inika, $fz: 10px, $fs: normal, $fw: 700);
 		line-height: 13px;
 		letter-spacing: 0;
 		text-align: center;
-		color: $greyColor-113;
+		color: variables.$greyColor-113;
 		background-color: transparent;
 		transition: all 0.5s ease;
 
-		@include hoverAndActive {
-			background-color: $orangeColor;
-			color: $whiteColor;
+		@include mixins.hoverAndActive {
+			background-color: variables.$orangeColor;
+			color: variables.$whiteColor;
 		}
 	}
 }

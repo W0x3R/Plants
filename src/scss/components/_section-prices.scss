@@ -1,17 +1,21 @@
+@use '../media';
+@use '../mixins';
+@use '../variables';
+
 .prices {
-	background-color: $whiteColor;
-	color: $blackColor;
+	background-color: variables.$whiteColor;
+	color: variables.$blackColor;
 
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 		padding: 40px 0 115px;
 
-		@include desktop {
+		@include media.desktop {
 			padding: 40px 0 88px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			flex-direction: column;
 			align-items: center;
 			padding: 23px 0 40px;
@@ -23,7 +27,7 @@
 		flex-direction: column;
 		align-items: flex-end;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			align-items: center;
 		}
 	}
@@ -34,17 +38,17 @@
 		font-size: 40px;
 		line-height: 50px;
 		letter-spacing: 0;
-		color: $blackColor;
+		color: variables.$blackColor;
 		text-align: right;
 
-		@include desktop {
+		@include media.desktop {
 			padding-top: 100px;
 			margin-bottom: 29px;
 			font-size: 25px;
 			line-height: 35px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding-top: 0;
 			margin-bottom: 20px;
 			max-width: 230px;
@@ -53,7 +57,7 @@
 		}
 
 		&_green {
-			color: $greenColor-73;
+			color: variables.$greenColor-73;
 		}
 	}
 
@@ -62,15 +66,15 @@
 		font-weight: 700;
 
 		&:active {
-			background-color: $orangeColor;
-			color: $whiteColor;
+			background-color: variables.$orangeColor;
+			color: variables.$whiteColor;
 		}
 
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 34px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 0;
 		}
 	}
@@ -78,18 +82,18 @@
 	&__contacts-img {
 		width: 152px;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			display: none;
 		}
 	}
 }
 
 .tariff {
-	@include desktop {
+	@include media.desktop {
 		margin-right: 40px;
 	}
 
-	@include bigMobile {
+	@include media.bigMobile {
 		margin-right: 0;
 	}
 
@@ -99,13 +103,13 @@
 		line-height: normal;
 		letter-spacing: 0;
 
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 55px;
 			padding-left: 14px;
 			font-size: 35px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 34px;
 			padding-left: 0;
 			font-size: 25px;
@@ -117,10 +121,10 @@
 		width: 332px;
 		padding: 34px 41px;
 		border-radius: 20px;
-		border: 1px solid $greyColor-227;
+		border: 1px solid variables.$greyColor-227;
 		letter-spacing: 0;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 20px;
 			padding: 29px 22px;
 			width: 224px;
@@ -135,14 +139,14 @@
 		width: 250px;
 		max-height: 50px;
 		border-radius: 20px;
-		background: $greenBg;
+		background: variables.$greenBg;
 		cursor: pointer;
 		overflow: hidden;
 		transition: max-height 0.3s ease-in;
 
 		&_active {
 			max-height: 155px;
-			background-color: $greyColor-214;
+			background-color: variables.$greyColor-214;
 
 			& .tariff__buttons-title {
 				margin-bottom: 9px;
@@ -153,7 +157,7 @@
 			margin-bottom: 32px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding: 16px 30px;
 			width: 180px;
 			font-size: 15px;
@@ -170,7 +174,7 @@
 		font-weight: 700;
 		line-height: 20px;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			font-size: 15px;
 		}
 	}
@@ -182,17 +186,17 @@
 		position: absolute;
 		right: 40px;
 		top: 17px;
-		@include sizes(16px, 16px);
-		background: $greyColor-217;
+		@include mixins.sizes(16px, 16px);
+		background: variables.$greyColor-217;
 		transition: all 0.5s ease;
 		border-radius: 50%;
 
 		&_active {
 			transform: rotate(180deg);
-			background: $greyColor-174;
+			background: variables.$greyColor-174;
 
 			& path {
-				stroke: $whiteColor
+				stroke: variables.$whiteColor
 			}
 		}
 	}
@@ -201,14 +205,14 @@
 	&__buttons-text {
 		padding-top: 6px;
 		margin-bottom: 6px;
-		border-top: 0.5px solid $greyColor-174;
+		border-top: 0.5px solid variables.$greyColor-174;
 		font-size: 10px;
 		font-weight: 300;
 		line-height: 10px;
 		letter-spacing: 0;
-		color: $greyColor-113;
+		color: variables.$greyColor-113;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			font-size: 9px;
 		}
 	}
@@ -218,20 +222,20 @@
 		font-size: 12px;
 		line-height: 20px;
 		letter-spacing: 0;
-		color: $blackColor;
+		color: variables.$blackColor;
 
-		@include bigMobile {
+		@include media.bigMobile {
 			font-size: 10px;
 		}
 
 		&_orange {
-			color: $orangeColor;
+			color: variables.$orangeColor;
 			font-weight: 700;
 
 			&:nth-of-type(2) {
 				font-size: 16px;
 
-				@include bigMobile {
+				@include media.bigMobile {
 					font-size: 14px;
 				}
 			}
@@ -239,11 +243,11 @@
 	}
 
 	&__buttons-order {
-		@include sizes(86px, 25px);
+		@include mixins.sizes(86px, 25px);
 		padding: 3px 20px;
 		border-radius: 10px;
-		background: $whiteColor;
-		color: $greyColor-113;
+		background: variables.$whiteColor;
+		color: variables.$greyColor-113;
 		font-size: 14px;
 		font-weight: 700;
 		line-height: 20px;
@@ -253,18 +257,18 @@
 			background-color 0.6s ease-in;
 		text-align: left;
 
-		@include bigMobile {
-			@include sizes(80px, 24px);
+		@include media.bigMobile {
+			@include mixins.sizes(80px, 24px);
 			font-size: 13px;
 		}
 
-		@include hoverAndActive {
-			color: $whiteColor;
-			background-color: $orangeColor;
+		@include mixins.hoverAndActive {
+			color: variables.$whiteColor;
+			background-color: variables.$orangeColor;
 		}
 
 		&:focus {
-			border-color: $redColor;
+			border-color: variables.$redColor;
 		}
 	}
 }

@@ -1,17 +1,21 @@
+@use '../media';
+@use '../mixins';
+@use '../variables';
+
 .about {
-	background-color: $whiteColor;
+	background-color: variables.$whiteColor;
 
 	&__inner {
 		display: flex;
 		align-items: center;
 		padding: 93px 0;
 
-		@include desktop {
+		@include media.desktop {
 			flex-direction: column;
 			padding: 40px 0 95px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			padding: 30px 0 25px;
 		}
 	}
@@ -21,7 +25,7 @@
 		padding-top: 7px;
 		max-width: 605px;
 
-		@include desktop {
+		@include media.desktop {
 			padding-top: 0;
 			margin-right: 0;
 			max-width: 668px;
@@ -34,23 +38,23 @@
 
 	&__info-title {
 		margin-bottom: 40px;
-		color: $greenColor-73;
+		color: variables.$greenColor-73;
 		letter-spacing: 0;
 		word-spacing: 2px;
 
-		@include desktop {
+		@include media.desktop {
 			padding-top: 0;
 			margin-bottom: 52px;
 			text-align: center;
 			text-wrap: balance;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 16px;
 		}
 
 		&_orange {
-			color: $orangeColor;
+			color: variables.$orangeColor;
 		}
 	}
 
@@ -58,13 +62,13 @@
 		font-size: 20px;
 		line-height: 30px;
 		letter-spacing: 0;
-		color: $greyColor-99;
+		color: variables.$greyColor-99;
 
-		@include desktop {
+		@include media.desktop {
 			margin-bottom: 64px;
 		}
 
-		@include bigMobile {
+		@include media.bigMobile {
 			margin-bottom: 0;
 			font-size: 15px;
 			line-height: 25px;
