@@ -22,7 +22,6 @@
 
 	&__info {
 		margin-right: 153px;
-		padding-top: 7px;
 		max-width: 605px;
 
 		@include media.desktop {
@@ -33,14 +32,14 @@
 	}
 
 	&__info-image {
-		width: clamp(150px, 33vw, 462px);
+		width: clamp(150px, 33vw, 464px);
 	}
 
 	&__info-title {
 		margin-bottom: 40px;
 		color: variables.$greenColor-73;
 		letter-spacing: 0;
-		word-spacing: 2px;
+		word-spacing: 0.5px;
 
 		@include media.desktop {
 			padding-top: 0;
@@ -50,7 +49,7 @@
 		}
 
 		@include media.bigMobile {
-			margin-bottom: 16px;
+			margin-bottom: 13px;
 		}
 
 		&_orange {

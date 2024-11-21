@@ -9,7 +9,7 @@
 	color: variables.$linksNavColor;
 
 	.container {
-		padding-left: 113px;
+		padding-left: 111px;
 
 		@include media.desktop {
 			padding-left: 50px;
@@ -36,7 +36,6 @@
 	display: flex;
 	align-self: flex-start;
 	align-items: baseline;
-	gap: 0 2px;
 	letter-spacing: 0;
 	margin-top: 10px;
 
@@ -52,7 +51,7 @@
 .nav {
 	&__list {
 		display: flex;
-		gap: 0 46px;
+		gap: 0 47px;
 
 		@include media.bigMobile {
 			position: absolute;

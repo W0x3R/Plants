@@ -13,18 +13,18 @@
 		@include media.desktop {
 			flex-direction: row-reverse;
 			justify-content: space-between;
-			padding: 40px 0 70px;
+			padding: 39px 0 70px;
 		}
 
 		@include media.bigMobile {
-			padding: 24px 0;
+			padding: 27px 0 24px;
 			justify-content: center;
 		}
 	}
 
 	&__image {
-		width: clamp(280px, 31vw, 449px);
-		margin-right: 230px;
+		width: clamp(280px, 32vw, 449px);
+		margin-right: 224px;
 
 		@include media.desktop {
 			margin-right: 0;
@@ -43,7 +43,7 @@
 	}
 
 	&__info-title {
-		margin-bottom: 42px;
+		margin-bottom: 45px;
 		font-size: 45px;
 		line-height: 50px;
 		letter-spacing: 0;
@@ -56,7 +56,7 @@
 		}
 
 		@include media.bigMobile {
-			margin-bottom: 24px;
+			margin-bottom: 21px;
 			font-size: 25px;
 			line-height: 35px;
 		}
@@ -68,6 +68,7 @@
 
 	&__info-subtitle {
 		margin-bottom: 48px;
+		max-width: 525px;
 		font-size: 20px;
 		line-height: 35px;
 		letter-spacing: 0;

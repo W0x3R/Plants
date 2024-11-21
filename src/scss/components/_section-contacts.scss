@@ -24,7 +24,7 @@
 		@include media.desktop {
 			flex-direction: column;
 			align-items: center;
-			padding-top: 40px;
+			padding-top: 36px;
 		}
 
 		@include media.bigMobile {
@@ -33,7 +33,7 @@
 	}
 
 	&__title {
-		margin-top: 12px;
+		margin-top: 8px;
 		font-family: 'Inika';
 		font-size: 40px;
 		line-height: normal;
@@ -54,7 +54,7 @@
 	&__image {
 		order: -2;
 		width: 400px;
-		margin-right: 50px;
+		margin-right: 46px;
 
 		@include media.desktop {
 			order: 0;
@@ -69,7 +69,7 @@
 	}
 
 	&__details {
-		margin: 100px 0 47px;
+		margin: 94px 0 47px;
 		font-size: 20px;
 		line-height: 40px;
 
@@ -132,9 +132,10 @@
 		transition: all 0.5s ease;
 
 		@include media.bigMobile {
-			padding-right: 20px;
+			padding-inline: 18px 22px;
 			width: 300px;
 		}
+
 
 		@include mixins.hover {
 			background: variables.$greenSummaryBg;
@@ -182,16 +183,18 @@
 
 	&__popUp {
 		@include mixins.sizes(448px, 214px);
-		padding: 17px 76px 32px 35px;
+		padding: 17px 76px 32px 33px;
+		transform: translateX(300%);
 		border: 1px solid variables.$blackColor;
 		border-radius: 20px;
 		font-size: 16px;
 		line-height: 40px;
+		letter-spacing: 0.8px;
 		background: variables.$greenBg;
 		transition: transform 0.5s ease;
-		transform: translateX(200%);
 
 		@include media.desktop {
+			padding-top: 15px;
 			margin-bottom: 14px;
 		}
 
@@ -213,16 +216,15 @@
 	&__popUp-info {
 		display: flex;
 		flex-direction: column;
-		margin-right: 12px;
+		margin-right: 16px;
 		color: variables.$blackColor;
 
 		@include media.bigMobile {
-			margin-right: 5px;
+			margin-right: 0px;
 			max-width: 65px;
-			line-height: 20px;
 
-			& p:not(:last-child) {
-				margin-bottom: 20px;
+			& p:last-child {
+				line-height: 20px;
 			}
 		}
 	}
@@ -233,24 +235,23 @@
 		color: variables.$greyColor-113;
 
 		& p:last-of-type {
-			margin-bottom: 22px;
+			margin-bottom: 18px;
 		}
 
 		@include media.bigMobile {
 			max-width: 146px;
-			line-height: 20px;
-
-			& p:not(:last-of-type) {
-				margin-bottom: 20px;
-			}
 
 			& p:last-of-type {
-				margin-bottom: 17px;
+				margin-bottom: 19px;
+				padding-left: 8px;
+				line-height: 20px;
 			}
 		}
 	}
 
 	&__popUp-link {
+		position: relative;
+		right: 5px;
 		@include mixins.sizes(122px, 26px);
 		padding: 7px 29px;
 		border: 1px solid variables.$orangeColor;
@@ -262,6 +263,10 @@
 		color: variables.$greyColor-113;
 		background-color: transparent;
 		transition: all 0.5s ease;
+
+		@include media.bigMobile {
+			right: 16px;
+		}
 
 		@include mixins.hoverAndActive {
 			background-color: variables.$orangeColor;
