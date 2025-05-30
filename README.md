@@ -26,20 +26,17 @@
 
 ✅ **Burger menu:**
 
-- On screen resolutions smaller than 768px, the navigation bar is hidden and the burger icon appears.
+- On screens narrower than 768px, the navigation bar is hidden and replaced by a burger icon.
 
-- When you click on the burger icon, an adaptive menu appears.
-- When you click on the cross, the adaptive menu is hidden by moving off the screen.
+- Clicking the burger icon opens an adaptive menu, which closes smoothly when clicking the close icon, a navigation link, or outside the menu area.
 
-- The links in the adaptive menu work by providing smooth scrolling through the anchors.
-
-- When clicking on a link in the adaptive menu the adaptive menu is smooth, also hiding the menu happens if you make a click outside this window.
+- Navigation links enable smooth scrolling to anchor sections.
 
 ✅ **Service blur:**
 
-- Pressing the buttons: Gardens, Lawn, Planting changes the focus to services in the service section.
+- Buttons Gardens, Lawn, and Planting highlight the corresponding service cards.
 
-- When you select one service (click one button), the other service cards take the blur effect, the selected service remains unchanged.
+- When a service is selected, other cards are blurred to emphasize the active one.
 
 - The user can press two service buttons at the same time, then this button also takes the active style and the cards with the service name come out of the blur effect. In this case the user cannot press all three service buttons at the same time. When the active button is pressed again, it is deactivated (becomes inactive) and the positions bound to it return to the initial state (enter the blur state if there is still an active button or stop being in blur if it was the only button pressed).
 
@@ -47,24 +44,26 @@
 
 ✅ **Prices accordion:**
 
-- Implementation of 3 drop-down lists about services and prices in the prices section.
+- Three dropdown lists implemented in the Prices section.
 
-- When you click on the dropdown button, a description of the price rates appears according to the layout. An order button is implemented inside, which leads to the contacts section, when you click on it Accordion still remains open.
+- Clicking on the dropdown button, a description of the price rates appears according to the layout. An order button is implemented inside, which leads to the contacts section, when you click on it accordion still remains open.
 
 - The user can independently close the content by clicking on the button, but cannot open all service tariffs at the same time, when opening a new tariff, the previous one is automatically closed.
 
 ✅ **Contacts select:**
 
-- In the contacts section select with selection of cities is implemented.
+- A dropdown menu allows users to select a city.
 
-- Depending on the user's choice, a block with the address and phone number of the office in a particular city appears.
-- When you press the Call us button, a call is realized by the number that corresponds to the selected city.
+- The corresponding office address and phone number appear dynamically.
+
+- Clicking the Call us button triggers a phone call to the number of the selected city.
+
 
 ✅ **Adaptive:**
 
-- The application elements optimally occupy the page space.
+- All UI components adapt seamlessly to various screen sizes.
 
-- The app displays correctly on both computer and mobile devices.
+- The layout is fully responsive and works correctly on both desktop and mobile devices.
 
 ## Run the project locally:
 
