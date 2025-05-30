@@ -2,7 +2,7 @@
 
 **Plants** is a landing page that offers its services for growing plants in the garden and caring for them.
 
-![readmePhoto](/assets/images/readme-photo.jpg)
+![readmePhoto](https://res.cloudinary.com/dkcilxezg/image/upload/fl_preserve_transparency/v1748604747/plants_readme_yhvzlp.jpg?_s=public-apps)
 
 📋 Task: [Rolling Scopes School](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/plants/plants.md)
 
