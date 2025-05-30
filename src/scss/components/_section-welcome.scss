@@ -24,6 +24,7 @@
 
 	&__image {
 		width: clamp(280px, 32vw, 449px);
+		height: auto;
 		margin-right: 224px;
 
 		@include media.desktop {

@@ -54,6 +54,7 @@
 	&__image {
 		order: -2;
 		width: 400px;
+		height: auto;
 		margin-right: 46px;
 
 		@include media.desktop {

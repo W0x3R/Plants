@@ -33,6 +33,7 @@
 
 	&__info-image {
 		width: clamp(150px, 33vw, 464px);
+		height: auto;
 	}
 
 	&__info-title {

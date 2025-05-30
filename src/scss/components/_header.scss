@@ -60,6 +60,7 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			opacity: 0;
 			gap: 20px;
 			@include mixins.sizes(100dvw, 100dvh);
 			background-image: url('./images/burger-image.jpg');
@@ -72,6 +73,7 @@
 
 		&_active {
 			transform: translateY(0);
+			opacity: 1;
 		}
 	}
 
