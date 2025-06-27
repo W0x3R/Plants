@@ -24,7 +24,10 @@
 .burger {
 	display: none;
 	position: relative;
-	@include mixins.sizes(40px, 24px);
+	background-color: unset;
+	padding: 0;
+	border: 0;
+	@include mixins.sizes(40px, 26px);
 	cursor: pointer;
 
 	&_active {
@@ -45,13 +48,14 @@
 	}
 
 	&__line {
-		border-bottom: 2px solid variables.$blackColor;
+		@include mixins.sizes(40px, 2px);
+		background-color: variables.$blackColor;
 		transition: transform 0.1s ease-in;
 
 		&_active {
 			position: absolute;
 			width: 34px;
-			border-bottom: 2px solid variables.$whiteColor;
+			background-color: variables.$whiteColor;
 
 			&:nth-child(3n+1) {
 				display: none;

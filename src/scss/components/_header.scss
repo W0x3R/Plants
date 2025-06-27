@@ -65,8 +65,8 @@
 			@include mixins.sizes(100dvw, 100dvh);
 			background-image: url('./images/burger-image.jpg');
 			background-size: cover;
-			transform: translateY(-200%);
-			transition: transform 0.3s ease-in-out;
+			transform: translateY(-100%);
+			transition: all 0.3s ease-in-out;
 			color: variables.$whiteColor;
 			font-size: 32px;
 		}
